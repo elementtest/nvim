@@ -1,3 +1,5 @@
+-- Youtube:: A Powerful Way to Make Editing Code in Neovim Even Better
+-- Josean
 return {
   {
     "nvim-treesitter/nvim-treesitter",

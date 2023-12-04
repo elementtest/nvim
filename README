@@ -1,0 +1,29 @@
+README GOAL >>> give general notes on using NVIM
+
+after you install a plugin in the plugins folder you need to install it
+
+use :Lazy to open the lazy menu
+
+after installed it will not be loaded load it with 
+
+:Lazy load 
+
+then hit tab to scroll through the various options and find the one
+
+lazy loading will load certain parts ONLY WHEN NEEDED 
+
+it WILL NOT load everything at once.  
+
+setting lazy = false will make it so it loads on bootup
+
+
+<<<<<<<<<<<<<<<<< PLUGINS >>>>>>>>>>>>>>>>>>>
+priority means it will be loaded FIRST
+
+each lua plugin will take an argument called config
+
+it gets called everytime the plugin gets loaded
+
+it can be a function or it can be a table 
+
+

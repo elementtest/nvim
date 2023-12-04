@@ -159,3 +159,7 @@ keymap.set("v", ">", ">gv")
 --move selected lines up or down with alt key
 keymap.set('n', '<A-k>', ':m .-2<cr>==')
 keymap.set('n', '<A-j>', ':m .+1<cr>==')
+
+-- VIM ILLUMINATE PLUGIN
+-- use alt + n or alt + p to move through instances of
+-- search result that is highlighted

@@ -10,8 +10,12 @@ local keymap = vim.keymap
 -- YANK COPY PASTE
 -- remap copy (saving to + register) (" indicates register)
 -- issue <<adds a trailing space>>
--- using x key to delete DOES NOT add put in register
+-- VIM HIGHLIGHTED YANK PLUGIN
+-- will highlight text you yank to give visual confirm it succeeded
+-- :%y+ will copy the entire file 
 vim.keymap.set('v', '<leader><right>', '"+y')
+
+-- using x key to delete DOES NOT add put in register
 keymap.set("n", "x", '"_x')
 
 -- to UN HIGHLIGHT PRESS space<<leader>> then hh
@@ -163,3 +167,4 @@ keymap.set('n', '<A-j>', ':m .+1<cr>==')
 -- VIM ILLUMINATE PLUGIN
 -- use alt + n or alt + p to move through instances of
 -- search result that is highlighted
+

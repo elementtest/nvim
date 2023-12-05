@@ -1,4 +1,4 @@
-
+-- fuzzy finder for finding stuff
 local config = function()
 	local telescope = require("telescope")
 	telescope.setup({
@@ -38,12 +38,14 @@ return {
 		vim.keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>"),
 		vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>"),
 		vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>"),
-    --ff used a lot
+    --ff find files
 		vim.keymap.set("n", "<leader>fa", ":Telescope <CR>"),
 		vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>"),
-    --fg used a lot
+    --find using grep (inside files)
     vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>"),
-    --fb used a lot
+    --find using buffers
+    vim.keymap.set("n", "<leader>fr", ":Telescope oldfiles<CR>"),
+    --find recent files
 	},
 }
 

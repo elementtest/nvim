@@ -28,3 +28,10 @@ it can be a function or it can be a table
 
 TO DO :: continue josean treesitter video, set up keymaps and play around with javascript file
 icons will change based on git status in file tree
+
+ERROR:  
+
+WARNING {nvim-tree.lua}: setting a table to `Plugin.config` is deprecated. Please use `Plugin.opts` instead
+
+HOW TO FIX IT:: conf usually used as a table had to go in and replace 
+conf with ops = { } to fix the error.  just changing one word

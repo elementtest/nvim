@@ -129,6 +129,11 @@ vim.o.completeopt = "menuone,noinsert,noselect"
 --no insert means nothing will be inserted by default
 --no select means nothing will be selected by default
 
+--BUFFERS LUALINE 
+--CTRL JIA o
+--CTRL JIA i 
+--both of these will switch between the two buffers 
+
 -- Behaviour
 vim.o.hidden = true 
 --can change buffers wihtout saving

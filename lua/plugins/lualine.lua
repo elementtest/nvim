@@ -1,3 +1,4 @@
+-- bottom status line showing information and open buffers
 local config = function()
 	require("lualine").setup({
 		options = {

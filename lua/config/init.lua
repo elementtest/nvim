@@ -43,7 +43,6 @@ local opts = {
 		notify = true,
 	},
 }
-
 require("lazy").setup(plugins, opts)
 -- IMPORTANT --
 -- line above will look in /lua/plugins folder for ALL plugins

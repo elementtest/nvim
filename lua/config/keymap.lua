@@ -173,3 +173,6 @@ keymap.set('n', '<A-j>', ':m .+1<cr>==')
 -- use alt + n or alt + p to move through instances of
 -- search result that is highlighted
 
+--Open lazy plugin manager
+--think 1 looks like L or first thing that comes
+keymap.set('n', '<leader>1', ':Lazy<CR>')

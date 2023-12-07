@@ -173,4 +173,3 @@ keymap.set('n', '<A-j>', ':m .+1<cr>==')
 -- use alt + n or alt + p to move through instances of
 -- search result that is highlighted
 
-

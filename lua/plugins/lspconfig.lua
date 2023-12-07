@@ -39,5 +39,6 @@ return     {
             --    capabilities = capabilities
             --    COPY PASTE SERVER SETTINGS HERE
             --})
+        --SEE LSP CONFIG DOCUMENTATION TO SEE HOW TO SET UP
         end
     }

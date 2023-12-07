@@ -1,3 +1,4 @@
+-- completion plugin for neovim 
 return     {
         'hrsh7th/nvim-cmp',
         event = 'InsertEnter',

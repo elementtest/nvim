@@ -1,5 +1,6 @@
 -- Youtube:: A Powerful Way to Make Editing Code in Neovim Even Better
 -- Josean
+-- syntax highlighting // moving through text objects loops, etc
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -25,6 +26,7 @@ return {
           enable = true,
         },
         -- ensure these language parsers are installed
+        -- go to treesitter git repo (see supported languages)
         ensure_installed = {
           "json",
           "javascript",

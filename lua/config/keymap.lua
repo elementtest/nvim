@@ -191,3 +191,10 @@ keymap.set('n', '<leader>n', ':InspectTree<CR>')
 -- opens a syntax tree for the current file
 --can see all the nodes in the document 
 --type :InspectTree
+
+-- VISUAL LINE INDENTATION MAKING INDENTS EASIER TO SEE
+-- Assuming this code is in your keymap.lua file
+vim.opt.list = true
+vim.opt.listchars = { tab = "   ", leadmultispace = '| ' }
+
+

@@ -193,7 +193,7 @@ keymap.set('n', '<leader>n', ':InspectTree<CR>')
 --type :InspectTree
 
 -- VISUAL LINE INDENTATION MAKING INDENTS EASIER TO SEE
--- Assuming this code is in your keymap.lua file
+--  will insert a | for every two spaces of indent 
 vim.opt.list = true
 vim.opt.listchars = { tab = "   ", leadmultispace = '| ' }
 

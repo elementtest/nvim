@@ -43,8 +43,12 @@ vim.o.number = true
 
 -- tabs and indentation 
 -- tabstop : every tab hit will insert TWO spaces
---converts tabs into spaces good for moving operating systems
--- softtab is how many spaces in insert mode
+-- shiftwidth : number of spaces used at each level of indent
+-- expandtab : replace tab chars with spaces from shiftwidth settin
+-- autoindent : adjusts new line based on indent of previous line
+-- softtabstop : number of spaces in insert mode for a tab hit
+-- smartindent : adjust indent of new line based on previous one
+-- !!! if smart no good can try cindent
 vim.o.tabstop = 2 
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
@@ -178,6 +182,12 @@ keymap.set('n', '<A-j>', ':m .+1<cr>==')
 keymap.set('n', '<leader>1', ':Lazy<CR>')
 
 -- TREESITTER NODE SHORTCUT
+--
 --Select bigger and bigger chunks of code going outward 
 --see ~/.config/nvim/lua/plugins/treesitter.lua
---press control x 
+--press <C-x> control x 
+
+keymap.set('n', '<leader>n', ':InspectTree<CR>')
+-- opens a syntax tree for the current file
+--can see all the nodes in the document 
+--type :InspectTree

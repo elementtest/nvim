@@ -176,3 +176,8 @@ keymap.set('n', '<A-j>', ':m .+1<cr>==')
 --Open lazy plugin manager
 --think 1 looks like L or first thing that comes
 keymap.set('n', '<leader>1', ':Lazy<CR>')
+
+-- TREESITTER NODE SHORTCUT
+--Select bigger and bigger chunks of code going outward 
+--see ~/.config/nvim/lua/plugins/treesitter.lua
+--press control x 

@@ -5,7 +5,11 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPre", "BufNewFile" },
+    -- lazy loads on opening an existing buffer >> BufReadPre
+    -- also for a new buffer >> BufNewFile
     build = ":TSUpdate",
+    -- makes sure on update all installed parsers are also updated
+    -- otherwise can break
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
       "windwp/nvim-ts-autotag",
@@ -43,8 +47,11 @@ return {
         incremental_selection = {
           enable = true,
           keymaps = {
-            init_selection = "<C-space>",
-            node_incremental = "<C-space>",
+            init_selection = "<C-x>",
+            node_incremental = "<C-x>",
+            -- really cool shortcut
+            -- each time you hit control x 
+            -- will select bigger and bigger blocks of code
             scope_incremental = false,
             node_decremental = "<bs>",
           },

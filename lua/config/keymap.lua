@@ -29,10 +29,10 @@ keymap.set("n", "<leader>hh", ":nohl<CR>")
 -- using shift key with arrows goes down half a page
 vim.keymap.set("n", "<Down>", "<C-e>")
 vim.keymap.set("n", "<Up>", "<C-y>")
-vim.keymap.set("n", "<right>", "<C-d>zz")
-vim.keymap.set("n", "<left>", "<C-u>zz")
-vim.keymap.set("n", "<S-left>", "<C-b>zz")
-vim.keymap.set("n", "<S-right>", "<C-f>zz")
+vim.keymap.set("n", "<right>", "<C-f>zz")
+vim.keymap.set("n", "<left>", "<C-b>zz")
+vim.keymap.set("n", "<S-left>", "<C-u>zz")
+vim.keymap.set("n", "<S-right>", "<C-d>zz")
 
 
 -- make relative line numbers

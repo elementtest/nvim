@@ -36,3 +36,6 @@ WARNING {nvim-tree.lua}: setting a table to `Plugin.config` is deprecated. Pleas
 HOW TO FIX IT:: conf usually used as a table had to go in and replace 
 conf with ops = { } to fix the error.  just changing one word
 TO DO:: text objects in treesitter to move more quickly across code i.e. moving shortcuts for loops, moving classes, etc
+
+
+

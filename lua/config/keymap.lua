@@ -179,6 +179,12 @@ keymap.set("v", ">", ">gv")
 keymap.set('n', '<A-k>', ':m .-2<cr>==')
 keymap.set('n', '<A-j>', ':m .+1<cr>==')
 
+-- BLOCK MOVE LINES UP OR DOWN (visual mode)
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+-- move lines down (Cap J)
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- move lines down (Cap K)
+
 -- VIM ILLUMINATE PLUGIN
 -- when on a word highlights ALL instances of word
 -- use alt + n or alt + p to move through instances of

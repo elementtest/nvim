@@ -13,7 +13,9 @@ local keymap = vim.keymap
 -- VIM HIGHLIGHTED YANK PLUGIN
 -- will highlight text you yank to give visual confirm it succeeded
 -- :%y+ will copy the entire file 
-vim.keymap.set('v', '<leader><right>', '"+y')
+--vim.keymap.set('v', '<leader><right>', '"+y')
+--right now commenting out.  yy works fine for this purpose 
+--!!!!USE BIG Y TO NOT HAVE A TRAILING SPACE COPIED
 
 -- using x key to delete DOES NOT add put in register
 keymap.set("n", "x", '"_x')

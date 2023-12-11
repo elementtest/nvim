@@ -1,6 +1,5 @@
 -- set spacebar as mapleader key
 vim.g.mapleader = " "
-
 -- leader key is spacebar
 -- <CR> ??? It means hit enter key
 -- noremap ???? It wont get remapped 
@@ -109,7 +108,7 @@ keymap.set("n", "<leader>O", "O<Esc>0")
 keymap.set("n", "<leader>co", "o<Esc>0xxi")
 
 --JUMP TO END OF LINE IN INSERT MODE
-keymap.set("i", "<leader><Esc>", "<Esc>A")
+keymap.set("i", "<S-Tab>", "<Esc>A")
 
 -- put line under cursor position
 opt.cursorline = true

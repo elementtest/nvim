@@ -114,6 +114,7 @@ keymap.set("i", "<S-Tab>", "<Esc>A")
 opt.cursorline = true
 
 -- NVIM TREE
+-- opens file explorer on left
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true})
 
 -- Appearance
@@ -143,7 +144,9 @@ vim.o.completeopt = "menuone,noinsert,noselect"
 
 -- Behaviour
 vim.o.hidden = true 
---can change buffers wihtout saving
+--can change buffers without saving
+vim.o.modifiable = true
+-- buffer can be changed or edited.  
 vim.o.errorbells = false
 -- no noise when you make an error
 vim.o.swapfile = false
@@ -158,8 +161,6 @@ vim.o.backspace = "indent,eol,start"
 --  if cursor is at the beginning of current line 
 --  start >> move to end of previous line when at beginning of file
 --  im guessing move to a different file ?? when at start of file??
-vim.o.modifiable = true
--- buffer can be changed or edited.  
 vim.o.encoding = "UTF-8"
 vim.o.clipboard = "unnamedplus"
 
@@ -177,6 +178,7 @@ keymap.set('n', '<A-k>', ':m .-2<cr>==')
 keymap.set('n', '<A-j>', ':m .+1<cr>==')
 
 -- VIM ILLUMINATE PLUGIN
+-- when on a word highlights ALL instances of word
 -- use alt + n or alt + p to move through instances of
 -- search result that is highlighted
 
@@ -201,3 +203,5 @@ vim.opt.list = true
 vim.opt.listchars = { tab = "   ", leadmultispace = '| ' }
 
 
+-- FONT USED
+-- font used is JetBrainsMono Nerd Font Mono

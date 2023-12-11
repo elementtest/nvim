@@ -182,7 +182,7 @@ keymap.set('n', '<A-j>', ':m .+1<cr>==')
 keymap.set('n', '<leader>1', ':Lazy<CR>')
 
 -- TREESITTER NODE SHORTCUT
---
+-- (called incremental selection)
 --Select bigger and bigger chunks of code going outward 
 --see ~/.config/nvim/lua/plugins/treesitter.lua
 --press <C-x> control x 

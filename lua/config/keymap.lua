@@ -69,8 +69,8 @@ vim.o.linebreak = true
 -- but uppercase will match ONLY uppercase
 --inc search :: as youre typing search will begin highlighting
 vim.o.ignorecase = true
-vim.o.smartcase = true 
-vim.o.incsearch = true 
+vim.o.smartcase = true
+vim.o.incsearch = true
 
 -- MOUSE
 -- only active in "v" visual mode
@@ -78,7 +78,7 @@ vim.o.mouse = "v"
 
 -- variable make it easier to write out many options
 -- same as vim.o it seems
-local opt = vim.opt 
+local opt = vim.opt
 
 -- when you delete or change a word it will include the -
 -- opt.iskeyword:append("-")

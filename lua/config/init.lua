@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('config.keymap')
+--links the keymap.lua file inside the /lua/config folder
 
 
 local plugins = "plugins"

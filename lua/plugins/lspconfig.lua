@@ -1,6 +1,7 @@
 return     {
         'neovim/nvim-lspconfig',
         config = function()
+          lazy = false
             local lspconfig = require('lspconfig')
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
@@ -13,6 +14,7 @@ return     {
             --0=============================================================================================0
             lspconfig.lua_ls.setup ({
                 on_attach = custom_attach,
+                -- function that runs AFTER LSP loads in buffer
                 capabilities = capabilities,
                 settings = {
                     Lua = {
@@ -33,6 +35,17 @@ return     {
                     },
                 },
             })
+            lspconfig.tsserver.setup ({
+              on_attach = custom_attach,
+              capabilities = capabilities,
+              filetypes = {
+                "typescript",
+                "typescriptreact",
+                "javascript",
+                "javascriptreact",
+              }
+            })
+
             -- new server goes here:
             -- lspconfig.SERVER.setup({
             --    on_attach = custom_attach,

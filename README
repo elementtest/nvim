@@ -26,6 +26,8 @@ each lua plugin will take an argument called config
 it gets called everytime the plugin gets loaded
 it can be a function or it can be a table 
 
+<<REQUIRE>>
+used to grab EXTERNAL stuff, ie modules folders etc
 
 TO DO LIST:::
 1.  Go through Primeagen key bindings

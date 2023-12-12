@@ -171,7 +171,7 @@ vim.o.clipboard = "unnamedplus"
 --see comment.nvim in lua/plugins folder
 
 --Indenting 
---indents in visual mode 
+--indents in normal mode 
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 

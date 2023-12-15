@@ -219,3 +219,4 @@ vim.opt.listchars = { tab = "   ", leadmultispace = '| ' }
 vim.opt.shortmess:append({ I = true })
 -- suppresses intro screen message 
 -- use :intro to open 
+

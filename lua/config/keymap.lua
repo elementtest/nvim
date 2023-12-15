@@ -22,7 +22,7 @@ keymap.set("n", "x", '"_x')
 
 -- to UN HIGHLIGHT PRESS space<<leader>> then hh
 -- think hh == hide highlights
-keymap.set("n", "<leader>hh", ":nohl<CR>")
+keymap.set("n", "<leader>h", ":nohl<CR>")
 
 
 -- REMAP arrow keys to scrolling keys 

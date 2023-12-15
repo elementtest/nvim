@@ -51,7 +51,7 @@ vim.o.number = true
 -- softtabstop : number of spaces in insert mode for a tab hit
 -- smartindent : adjust indent of new line based on previous one
 -- !!! if smart no good can try cindent
-vim.o.tabstop = 2 
+vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.o.autoindent = true
@@ -213,3 +213,9 @@ vim.opt.listchars = { tab = "   ", leadmultispace = '| ' }
 
 -- FONT USED
 -- font used is JetBrainsMono Nerd Font Mono
+
+
+-- NEOVIM intro screen 
+vim.opt.shortmess:append({ I = true })
+-- suppresses intro screen message 
+-- use :intro to open 

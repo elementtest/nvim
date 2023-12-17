@@ -223,5 +223,3 @@ vim.opt.shortmess:append({ I = true })
 -- quick write quit exit vim
 keymap.set('n', '<leader>q', ':wq<CR>')
 
--- remap ; to : (way easier to type commands)
-keymap.set('n', ';', ':')

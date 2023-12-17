@@ -1,4 +1,5 @@
 -- nicer nvim UI instead of forced at bottom i.e. : commandline
+-- note experimental (COULD CAUSE PROBLEMS)
 return {
   "folke/noice.nvim",
   event = "VeryLazy",

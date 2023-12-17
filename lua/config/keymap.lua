@@ -221,6 +221,7 @@ vim.opt.shortmess:append({ I = true })
 -- suppresses intro screen message 
 -- use :intro to open 
 
--- quick write quit exit vim
-keymap.set('n', '<leader>q', ':wq<CR>')
+-- Define your custom leader key
+vim.g.mapleader = " "
+
 

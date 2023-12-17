@@ -46,6 +46,11 @@ ERROR:
 treesitter executabale not found
 HOW TO FIX IT:  found treesitter executable and installed in $PATH.  what this meant is you echo $PATH and have folders that appear.  you choose one folder that you want to put the tree sitter executable in.  have to chmod +x it.... files downloaded on linux are not immediately executable 
 
+BASH ERRORS <<WHEN RUNNING :checkhealth under treesitter>>
+HOW TO FIX:  Run :TSInstall bash and then TSUpdate
+updates the installed parsers
+
+
 <<<<<<<<<<<<<<<< PLUGINS >>>>>>>>>>>>>>>>>>>
 <<<FORMAT 1>>>
 return {

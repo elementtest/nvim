@@ -117,7 +117,8 @@ opt.cursorline = true
 
 -- NVIM TREE
 -- opens file explorer on left
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true})
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>",
+ { noremap = true, silent = true})
 
 -- Appearance
 vim.o.termguicolors = true

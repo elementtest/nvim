@@ -46,3 +46,31 @@ ERROR:
 treesitter executabale not found
 HOW TO FIX IT:  found treesitter executable and installed in $PATH.  what this meant is you echo $PATH and have folders that appear.  you choose one folder that you want to put the tree sitter executable in.  have to chmod +x it.... files downloaded on linux are not immediately executable 
 
+<<<<<<<<<<<<<<<< PLUGINS >>>>>>>>>>>>>>>>>>>
+<<<FORMAT 1>>>
+return {
+  'author/<PLUG-NAME',
+  lazy = false///true,
+  event = "VeryLazy",
+  opts = {},
+  dependencies = {
+    "otherauthor/otherplugin",
+  }
+  config = function()
+  require(<PLUG-NAME>).setup(
+
+  )
+}
+
+<<<FORMAT 2>>>
+local config = function()
+require(<PLUG-NAME).setup({
+
+  })
+end
+
+return {
+  "author/<PLUG-NAME>"
+  lazy = false,
+  config = config
+}

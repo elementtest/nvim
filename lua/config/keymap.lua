@@ -83,7 +83,6 @@ local opt = vim.opt
 -- when you delete or change a word it will include the -
 -- opt.iskeyword:append("-")
 
--- clipboard
 
 
 -- SPLIT WINDOWS
@@ -223,5 +222,10 @@ vim.opt.shortmess:append({ I = true })
 
 -- Define your custom leader key
 vim.g.mapleader = " "
+--
+--Skip forward two lines in insert mode
+keymap.set('i', '8<space>', '<right>')
 
 
+-- EXIT NEOVIM SHIFT ZZ SHORTCUT
+keymap.set("n", "ZQ", ":confirm qall<CR>")

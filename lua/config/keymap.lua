@@ -95,11 +95,6 @@ keymap.set("n", "<leader>9", "<C-w>h") --  >> move to left window
 keymap.set("n", "<leader>j", "<C-w>j") --  >> move down a window
 keymap.set("n", "<leader>k", "<C-w>k") --  >> move up a window
 
--- TABS IN NVIM (think firefox/chrome tabs)
-keymap.set("n", "<leader>to", ":tabnew<CR>") --open new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 
 -- ADD LINE WITHOUT GOING INTO INSERT MODE
 keymap.set("n", "<leader>o", "o<Esc>0")

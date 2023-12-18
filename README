@@ -37,6 +37,7 @@ TO DO LIST:::
 3.  Folke Lazy nvim structurign your plugins research
 4.  diagnostics and formatter (prettier?) and linter
 
+
 ERROR:  
 WARNING {nvim-tree.lua}: setting a table to `Plugin.config` is deprecated. Please use `Plugin.opts` instead
 HOW TO FIX IT:: conf usually used as a table had to go in and replace 

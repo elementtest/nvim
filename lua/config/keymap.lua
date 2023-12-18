@@ -15,7 +15,7 @@ local keymap = vim.keymap
 -- :%y+ will copy the entire file 
 --vim.keymap.set('v', '<leader><right>', '"+y')
 --right now commenting out.  yy works fine for this purpose 
---!!!!USE BIG Y TO NOT HAVE A TRAILING SPACE COPIED
+--!USE BIG Y TO NOT HAVE A TRAILING SPACE COPIED
 
 -- using x key to delete DOES NOT add put in register
 keymap.set("n", "x", '"_x')
@@ -50,7 +50,6 @@ vim.o.number = true
 -- autoindent : adjusts new line based on indent of previous line
 -- softtabstop : number of spaces in insert mode for a tab hit
 -- smartindent : adjust indent of new line based on previous one
--- !!! if smart no good can try cindent
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
@@ -134,10 +133,11 @@ vim.o.completeopt = "menuone,noinsert,noselect"
 --no insert means nothing will be inserted by default
 --no select means nothing will be selected by default
 
---BUFFERS LUALINE 
---CTRL JIA o
---CTRL JIA i 
---both of these will switch between the two buffers 
+-- <<<<<<JUMP LIST>>>>>>>
+-- keeps track of movements in a file 
+--CTRL o <<moves back through jump list>>
+--CTRL i <<moves forward through jump list>>
+--allows navigation between locations 
 
 -- Behaviour
 vim.o.hidden = true 
@@ -222,5 +222,5 @@ vim.g.mapleader = " "
 keymap.set('i', '8<space>', '<right>')
 
 
--- EXIT NEOVIM SHIFT ZZ SHORTCUT
+-- EXIT NEOVIM SHIFT ZZ SHORTCUT!
 keymap.set("n", "<leader>q", ":confirm qall<CR>")

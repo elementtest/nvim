@@ -228,4 +228,4 @@ keymap.set('i', '8<space>', '<right>')
 
 
 -- EXIT NEOVIM SHIFT ZZ SHORTCUT
-keymap.set("n", "ZQ", ":confirm qall<CR>")
+keymap.set("n", "<leader>q", ":confirm qall<CR>")

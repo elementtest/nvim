@@ -80,3 +80,8 @@ return {
   lazy = false,
   config = config
 }
+
+
+<<<<<<<CUSTOM PERSONAL EDITS >>>>>>
+configured lspconfig plugin to print neovim version number as well
+as "lsp attached"

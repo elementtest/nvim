@@ -223,4 +223,6 @@ keymap.set('i', '8<space>', '<right>')
 
 
 -- EXIT NEOVIM SHIFT ZZ SHORTCUT!
+-- if nothing exits
+-- if buffer configured prompts if user wants save
 keymap.set("n", "<leader>q", ":confirm qall<CR>")

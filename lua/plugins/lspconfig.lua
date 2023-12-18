@@ -6,7 +6,10 @@ return     {
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
             local custom_attach = function(client, bufnr)
-                print('Lsp Attached.')
+              --display NVIM version with LSP 
+              local version_output = vim.fn.system('nvim --version')
+              local version_number = string.match(version_output, 'NVIM%s+v(%d+%.%d+%.%d+)')
+                print("<LSP ATTACHED> NVIM: " .. version_number)
             end
             --0=============================================================================================0
             -- █░░ █░█ ▄▀█

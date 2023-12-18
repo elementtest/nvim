@@ -35,7 +35,7 @@ TO DO LIST:::
 1.  Go through Primeagen key bindings
 2.  Text objects tree sitter?  
 3.  Folke Lazy nvim structurign your plugins research
-4.  diagnostics and formatter (prettier?) 
+4.  diagnostics and formatter (prettier?) and linter
 
 ERROR:  
 WARNING {nvim-tree.lua}: setting a table to `Plugin.config` is deprecated. Please use `Plugin.opts` instead

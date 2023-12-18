@@ -36,6 +36,7 @@ TO DO LIST:::
 2.  Text objects tree sitter?  
 3.  Folke Lazy nvim structurign your plugins research
 4.  diagnostics and formatter (prettier?) and linter
+5.  buffers and switching between them fluidly
 
 
 ERROR:  

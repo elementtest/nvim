@@ -2,6 +2,7 @@
 return     {
         'williamboman/mason.nvim',
         event = "BufReadPre",
+        -- will only load LSP on previous file
         -- mason opened before buffer is read
         -- originally had lazy = false
         config = function()

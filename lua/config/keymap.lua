@@ -25,7 +25,7 @@ keymap.set("n", "x", '"_x')
 
 -- to UN HIGHLIGHT PRESS space<<leader>> then hh
 -- think hh == hide highlights
-keymap.set("n", "<leader>h", ":nohl<CR>")
+keymap.set("n", "<S-Tab>", ":nohl<CR>")
 
 
 -- REMAP arrow keys to scrolling keys 
@@ -94,8 +94,8 @@ keymap.set("n", "<leader>sv", "<C-w>v") --split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") --split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") --make windows equal width
 keymap.set("n", "<leader>sx", ":close<CR>") --close current split window
-keymap.set("n", "<leader>0", "<C-w>l") --  >> move to right 
-keymap.set("n", "<leader>9", "<C-w>h") --  >> move to left window
+keymap.set("n", "<leader>l", "<C-w>l") --  >> move to right 
+keymap.set("n", "<leader>h", "<C-w>h") --  >> move to left window
 keymap.set("n", "<leader>j", "<C-w>j") --  >> move down a window
 keymap.set("n", "<leader>k", "<C-w>k") --  >> move up a window
 
@@ -105,7 +105,7 @@ keymap.set("n", "<leader>o", "o<Esc>0")
 keymap.set("n", "<leader>O", "O<Esc>0")
 
 -- ADD LINE UNDER COMMENT IN INSERT MODE (NO COMMENT MODE)
-keymap.set("n", "<leader>co", "o<Esc>0xxi")
+keymap.set("n", "<leader>c", "o<Esc>0xxi")
 
 --JUMP TO END OF LINE IN INSERT MODE
 keymap.set("i", "<S-Tab>", "<Esc>A")
@@ -113,10 +113,11 @@ keymap.set("i", "<S-Tab>", "<Esc>A")
 -- put line under cursor position
 opt.cursorline = true
 
+
 -- NVIM TREE
 -- opens file explorer on left
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>",
- { noremap = true, silent = true})
+{ noremap = true, silent = true})
 
 -- Appearance
 vim.o.termguicolors = true
@@ -224,9 +225,6 @@ vim.opt.shortmess:append({ I = true })
 -- Define your custom leader key
 vim.g.mapleader = " "
 --
---Skip forward two lines in insert mode
-keymap.set('i', '8<space>', '<right>')
-keymap.set('i', '9<space>', '<right><right>')
 
 
 -- EXIT NEOVIM SHIFT ZZ SHORTCUT!
@@ -234,7 +232,13 @@ keymap.set('i', '9<space>', '<right><right>')
 -- if buffer configured prompts if user wants save
 keymap.set("n", "<leader>q", ":confirm qall<CR>")
 
+-- skip forward one or two lines in insert mode
+keymap.set('i', '8<space>', '<right>')
+keymap.set('i', '9<space>', '<right><right>')
+
 -- TIMEOUT 
 -- ie when hit leader key how long do you have to press next key
+-- see above... how long will it "listen" for the space key after
+-- the 8 or 9 is hit
 vim.opt.timeoutlen = 300
 

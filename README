@@ -87,3 +87,16 @@ return {
 <<<<<<<CUSTOM PERSONAL EDITS >>>>>>
 configured lspconfig plugin to print neovim version number as well
 as "lsp attached"
+
+leader + h j k l keys will move in split windows 
+
+shift tab will unhighlight search results 
+
+leader + q will exit and ask if you want to save :confirm qall<CR>
+excellent time saver
+
+
+8 space or 9 space will jump ahead 1 or 2 characters 
+
+timeout can be adjusted to set how long a leader key has to wait for 
+the next key stroke 

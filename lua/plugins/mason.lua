@@ -1,10 +1,7 @@
 --MASON:  package manager install manager LSP servers/linters/formatters
 return     {
         'williamboman/mason.nvim',
-        event = "BufReadPre",
-        -- will only load LSP on previous file
-        -- mason opened before buffer is read
-        -- originally had lazy = false
+        lazy = false,
         config = function()
             require('mason').setup({
               ui = {

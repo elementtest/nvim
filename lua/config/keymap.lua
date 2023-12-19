@@ -1,11 +1,11 @@
 -- set spacebar as mapleader key
 vim.g.mapleader = " "
--- leader key is spacebar
--- <CR> ??? It means hit enter key
--- noremap ???? It wont get remapped 
--- silent ??? wont get any feedback in the terminal
 --variable to make writing faster
 local keymap = vim.keymap
+
+-- <CR> enter key
+-- noremap ???? It wont get remapped 
+-- silent ??? wont get any feedback in the terminal
 
 
 -- <<<<NOTES OTHER PLUGINS ETC>>>> --
@@ -55,16 +55,6 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "<Tab>", "<Cmd>nohlsearch<CR>")
 
 
--- REMAP arrow keys to scrolling keys 
--- left and right are big scrolls
--- up and down are small scrolls
--- using shift key with arrows goes down half a page
-vim.keymap.set("n", "<Down>", "<C-e>")
-vim.keymap.set("n", "<Up>", "<C-y>")
-vim.keymap.set("n", "<right>", "<C-f>zz")
-vim.keymap.set("n", "<left>", "<C-b>zz")
-vim.keymap.set("n", "<S-left>", "<C-u>zz")
-vim.keymap.set("n", "<S-right>", "<C-d>zz")
 
 
 -- make relative line numbers
@@ -72,6 +62,7 @@ vim.keymap.set("n", "<S-right>", "<C-d>zz")
 -- easier when using j and k motions to find exact line
 vim.o.relativenumber = true
 vim.o.number = true
+
 
 -- tabs and indentation 
 -- tabstop : every tab hit will insert TWO spaces
@@ -114,6 +105,16 @@ local opt = vim.opt
 -- opt.iskeyword:append("-")
 
 
+-- REMAP arrow keys to scrolling keys 
+-- left and right are big scrolls
+-- up and down are small scrolls
+-- using shift key with arrows goes down half a page
+vim.keymap.set("n", "<Down>", "<C-e>")
+vim.keymap.set("n", "<Up>", "<C-y>")
+vim.keymap.set("n", "<right>", "<C-f>zz")
+vim.keymap.set("n", "<left>", "<C-b>zz")
+vim.keymap.set("n", "<S-left>", "<C-u>zz")
+vim.keymap.set("n", "<S-right>", "<C-d>zz")
 
 -- SPLIT WINDOWS
 keymap.set("n", "<leader>sv", "<C-w>v") --split window vertically

@@ -206,9 +206,11 @@ keymap.set('n', '<leader>n', ':InspectTree<CR>')
 --type :InspectTree
 
 -- VISUAL LINE INDENTATION MAKING INDENTS EASIER TO SEE
---  will insert a | for every two spaces of indent 
+-- listchars will insert a | for every two spaces of indent 
+-- showmatch will highlight matching {[""]} when hovered over it
 vim.opt.list = true
 vim.opt.listchars = { tab = "  ", leadmultispace = '│   ' }
+vim.opt.showmatch = true
 
 -- FONT USED
 -- font used is JetBrainsMono Nerd Font Mono
@@ -224,9 +226,15 @@ vim.g.mapleader = " "
 --
 --Skip forward two lines in insert mode
 keymap.set('i', '8<space>', '<right>')
+keymap.set('i', '9<space>', '<right><right>')
 
 
 -- EXIT NEOVIM SHIFT ZZ SHORTCUT!
 -- if nothing exits
 -- if buffer configured prompts if user wants save
 keymap.set("n", "<leader>q", ":confirm qall<CR>")
+
+-- TIMEOUT 
+-- ie when hit leader key how long do you have to press next key
+vim.opt.timeoutlen = 300
+

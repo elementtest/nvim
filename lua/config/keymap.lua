@@ -23,7 +23,7 @@ local keymap = vim.keymap
 --allows navigation between locations 
 
 -- VIM ILLUMINATE PLUGIN
--- when on a word highlights ALL instances of word
+-- when cursor on a word(not /search) it highlight ALL instance of word
 -- use alt + n or alt + p to move through instances of
 -- search result that is highlighted
 

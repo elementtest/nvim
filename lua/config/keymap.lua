@@ -7,8 +7,25 @@ vim.g.mapleader = " "
 --variable to make writing faster
 local keymap = vim.keymap
 
--- display file path and file name at VERY top of terminal
-vim.o.title = true
+
+-- <<<<NOTES OTHER PLUGINS ETC>>>> --
+--COMMENTS
+--to add a comment type gcc 
+--see comment.nvim in lua/plugins folder
+
+-- FONT USED
+-- font used is JetBrainsMono Nerd Font Mono
+
+-- JUMP LIST
+-- keeps track of movements in a file 
+--CTRL o <<moves back through jump list>>
+--CTRL i <<moves forward through jump list>>
+--allows navigation between locations 
+
+-- VIM ILLUMINATE PLUGIN
+-- when on a word highlights ALL instances of word
+-- use alt + n or alt + p to move through instances of
+-- search result that is highlighted
 
 -- YANK COPY PASTE
 -- remap copy (saving to + register) (" indicates register)
@@ -19,6 +36,16 @@ vim.o.title = true
 --vim.keymap.set('v', '<leader><right>', '"+y')
 --right now commenting out.  yy works fine for this purpose 
 --!USE BIG Y TO NOT HAVE A TRAILING SPACE COPIED
+
+-- TREESITTER NODE SHORTCUT
+-- (called incremental selection)
+--Select bigger and bigger chunks of code going outward 
+--see ~/.config/nvim/lua/plugins/treesitter.lua
+--press <C-x> control x 
+
+--<<<<KEYMAPS>>>>--
+-- display file path and file name at VERY top of terminal
+vim.o.title = true
 
 -- using x key to delete DOES NOT add put in register
 keymap.set("n", "x", '"_x')
@@ -120,30 +147,20 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>",
 { noremap = true, silent = true})
 
 -- Appearance
+-- termguicolors == required by many plugins / terminal color support
+-- colorcolumn visually draws arbitrary line (see right) >>>>
+-- signcolumn displays "signs" ie breakpoints, git markers, etc
+-- !scrolloff # is minimum number of lines to keep above/below cursor
+-- completeopt:
+-- menuone display popup menu even if only one match
+-- noinsert do not automatically insert the first match
+-- !noselect do not automatically select first match 
 vim.o.termguicolors = true
--- allows full color support in terminal
--- required by many plugins
 vim.o.colorcolumn = '100'
--- VISUALLY DRAWS ARBITRARY LINE indicating VISUALLY how wide code should be 
---allows highlight a column or range of columns in editor
 vim.o.signcolumn = "yes"
--- will keep a gutter and the necessary space available
--- so these two options maintain width of the text
 vim.o.scrolloff = 10
--- when searching up and down the screen 
--- if it gets within 10 lines of the bottom it will begin scrolling
--- basically doesnt allow text to be bottom of the screen
 vim.o.completeopt = "menuone,noinsert,noselect"
---menuone will show if there is only one item in the completion menu
---think vscode popup suggestions
---no insert means nothing will be inserted by default
---no select means nothing will be selected by default
 
--- <<<<<<JUMP LIST>>>>>>>
--- keeps track of movements in a file 
---CTRL o <<moves back through jump list>>
---CTRL i <<moves forward through jump list>>
---allows navigation between locations 
 
 -- Behaviour
 vim.o.hidden = true 
@@ -167,9 +184,6 @@ vim.o.backspace = "indent,eol,start"
 vim.o.encoding = "UTF-8"
 vim.o.clipboard = "unnamedplus"
 
---COMMENTS
---to add a comment type gcc 
---see comment.nvim in lua/plugins folder
 
 --Indenting 
 --indents in normal mode 
@@ -186,20 +200,11 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- move lines down (Cap K)
 
--- VIM ILLUMINATE PLUGIN
--- when on a word highlights ALL instances of word
--- use alt + n or alt + p to move through instances of
--- search result that is highlighted
 
 --Open lazy plugin manager
 --think 1 looks like L or first thing that comes
 keymap.set('n', '<leader>1', ':Lazy<CR>')
 
--- TREESITTER NODE SHORTCUT
--- (called incremental selection)
---Select bigger and bigger chunks of code going outward 
---see ~/.config/nvim/lua/plugins/treesitter.lua
---press <C-x> control x 
 
 keymap.set('n', '<leader>n', ':InspectTree<CR>')
 -- opens a syntax tree for the current file
@@ -207,14 +212,13 @@ keymap.set('n', '<leader>n', ':InspectTree<CR>')
 --type :InspectTree
 
 -- VISUAL LINE INDENTATION MAKING INDENTS EASIER TO SEE
+-- list enables special characters to be displayed
 -- listchars will insert a | for every two spaces of indent 
 -- showmatch will highlight matching {[""]} when hovered over it
 vim.opt.list = true
 vim.opt.listchars = { tab = "  ", leadmultispace = '│   ' }
 vim.opt.showmatch = true
 
--- FONT USED
--- font used is JetBrainsMono Nerd Font Mono
 
 
 -- NEOVIM intro screen 
@@ -222,9 +226,6 @@ vim.opt.shortmess:append({ I = true })
 -- suppresses intro screen message 
 -- use :intro to open 
 
--- Define your custom leader key
-vim.g.mapleader = " "
---
 
 
 -- EXIT NEOVIM SHIFT ZZ SHORTCUT!

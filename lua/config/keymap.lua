@@ -1,11 +1,10 @@
 -- set spacebar as mapleader key
---VARIABLES
+--<<<<VARIABLES>>>>>
 vim.g.mapleader = " "
 --variable to make writing faster
 local keymap = vim.keymap
 -- variable make it easier to write out many options
 local opt = vim.opt
-
 -- <CR> enter key
 -- noremap ???? It wont get remapped 
 -- silent ??? wont get any feedback in the terminal

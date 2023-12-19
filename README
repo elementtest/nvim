@@ -100,3 +100,5 @@ excellent time saver
 
 timeout can be adjusted to set how long a leader key has to wait for 
 the next key stroke 
+
+tab unhighlights might want to change this in future. 

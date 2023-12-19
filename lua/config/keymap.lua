@@ -50,9 +50,9 @@ vim.o.title = true
 -- using x key to delete DOES NOT add put in register
 keymap.set("n", "x", '"_x')
 
--- to UN HIGHLIGHT PRESS space<<leader>> then hh
+-- to UN HIGHLIGHT PRESS space leader then hh
 -- think hh == hide highlights
-keymap.set("n", "<S-Tab>", ":nohl<CR>")
+keymap.set("n", "<Tab>", "<Cmd>nohlsearch<CR>")
 
 
 -- REMAP arrow keys to scrolling keys 

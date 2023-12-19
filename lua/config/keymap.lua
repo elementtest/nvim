@@ -86,8 +86,6 @@ vim.o.expandtab = true
 vim.o.autoindent = true
 vim.o.softtabstop = 2
 vim.o.smartindent = true
--- inserts spaces to reach next tab stop !EXPERIMENTAL (DELETE IF BU OK)
-vim.o.smarttab = true
 
 
 -- line wrapping 

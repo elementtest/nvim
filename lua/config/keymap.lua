@@ -7,6 +7,9 @@ vim.g.mapleader = " "
 --variable to make writing faster
 local keymap = vim.keymap
 
+-- display file path and file name at VERY top of terminal
+vim.o.title = true
+
 -- YANK COPY PASTE
 -- remap copy (saving to + register) (" indicates register)
 -- issue <<adds a trailing space>>
@@ -56,6 +59,8 @@ vim.o.expandtab = true
 vim.o.autoindent = true
 vim.o.softtabstop = 2
 vim.o.smartindent = true
+-- inserts spaces to reach next tab stop !EXPERIMENTAL (DELETE IF BU OK)
+vim.o.smarttab = true
 
 
 -- line wrapping 
@@ -203,8 +208,7 @@ keymap.set('n', '<leader>n', ':InspectTree<CR>')
 -- VISUAL LINE INDENTATION MAKING INDENTS EASIER TO SEE
 --  will insert a | for every two spaces of indent 
 vim.opt.list = true
-vim.opt.listchars = { tab = "   ", leadmultispace = '| ' }
-
+vim.opt.listchars = { tab = "  ", leadmultispace = '│   ' }
 
 -- FONT USED
 -- font used is JetBrainsMono Nerd Font Mono

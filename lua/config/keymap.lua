@@ -234,4 +234,6 @@ keymap.set("n", "<leader>q", ":confirm qall<CR>")
 keymap.set('i', '8<space>', '<right>')
 keymap.set('i', '9<space>', '<right><right>')
 
+-- insert closing <> (autopairs plugin doesnt have it)
+keymap.set('i', '<', '<><left>')
 

@@ -180,8 +180,8 @@ keymap.set("n", "<leader>sv", "<C-w>v") --split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") --split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") --make windows equal width
 keymap.set("n", "<leader>sx", ":close<CR>") --close current split window
-keymap.set("n", "<leader>l", "<C-w>l") --  >> move to right 
-keymap.set("n", "<leader>h", "<C-w>h") --  >> move to left window
+keymap.set("n", "<leader>0", "<C-w>l") --  >> move to right 
+keymap.set("n", "<leader>9", "<C-w>h") --  >> move to left window
 keymap.set("n", "<leader>j", "<C-w>j") --  >> move down a window
 keymap.set("n", "<leader>k", "<C-w>k") --  >> move up a window
 

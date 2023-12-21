@@ -242,7 +242,7 @@ keymap.set('n', 'N', 'Nzzzv')
 --cursor remains in same place append LINE BELOW TO CURRENT LINE
 keymap.set('n', 'J', 'mzJ`z')
 
--- highlight word paste into other word and repeat without problems
+-- paste into highlighted word and repeat without problems
 keymap.set('x', '<leader>p', "\"_dP")
 
 

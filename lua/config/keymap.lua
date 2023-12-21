@@ -48,7 +48,7 @@ local opt = vim.opt
 --<<<<KEYMAPS>>>>--
 
 -- Behaviour
-vim.o.hidden = true 
+vim.o.hidden = true
 --can change buffers without saving
 vim.o.modifiable = true
 -- buffer can be changed or edited.  
@@ -233,7 +233,4 @@ keymap.set("n", "<leader>q", ":confirm qall<CR>")
 -- skip forward one or two lines in insert mode
 keymap.set('i', '8<space>', '<right>')
 keymap.set('i', '9<space>', '<right><right>')
-
--- insert closing <> (autopairs plugin doesnt have it)
-keymap.set('i', '<', '<><left>')
 

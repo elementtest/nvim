@@ -240,6 +240,7 @@ keymap.set('n', 'n', 'nzzzv')
 keymap.set('n', 'N', 'Nzzzv')
 
 
---test 
 --cursor remains in same place append BOTTOM LINE TO END
 keymap.set('n', 'J', 'mzJ`z')
+
+

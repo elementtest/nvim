@@ -160,7 +160,7 @@ keymap.set("n", "x", '"_x')
 
 -- to UN HIGHLIGHT PRESS space leader then hh
 -- think hh == hide highlights
-keymap.set("n", "<Tab>", "<Cmd>nohlsearch<CR>")
+keymap.set("n", "<Tab>", "<Cmd>nohlsearch<CR><C-W>w")
 
 
 -- REMAP arrow keys to scrolling keys 

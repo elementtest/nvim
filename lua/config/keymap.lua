@@ -188,7 +188,6 @@ keymap.set("n", "<leader>k", "<C-w>k") --  >> move up a window
 
 -- ADD LINE WITHOUT GOING INTO INSERT MODE
 keymap.set("n", "<leader>o", "o<Esc>0")
-keymap.set("n", "<leader>O", "O<Esc>0")
 
 -- ADD LINE UNDER COMMENT IN INSERT MODE (NO COMMENT MODE)
 keymap.set("n", "<leader>c", "o<Esc>0xxi")
@@ -210,11 +209,6 @@ keymap.set("v", ">", ">gv")
 keymap.set('n', '<A-k>', ':m .-2<cr>==')
 keymap.set('n', '<A-j>', ':m .+1<cr>==')
 
--- BLOCK MOVE LINES UP OR DOWN (visual mode)
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
--- move lines down (Cap J)
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
--- move lines down (Cap K)
 
 --Open lazy plugin manager
 --think 1 looks like L or first thing that comes
@@ -234,3 +228,18 @@ keymap.set("n", "<leader>q", ":confirm qall<CR>")
 keymap.set('i', '8<space>', '<right>')
 keymap.set('i', '9<space>', '<right><right>')
 
+-- BLOCK MOVE LINES UP OR DOWN (visual mode)
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+-- move lines down (Cap J)
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- move lines down (Cap K)
+
+
+--allow search terms to stay in the middle 
+keymap.set('n', 'n', 'nzzzv')
+keymap.set('n', 'N', 'Nzzzv')
+
+
+--test 
+--cursor remains in same place append BOTTOM LINE TO END
+keymap.set('n', 'J', 'mzJ`z')

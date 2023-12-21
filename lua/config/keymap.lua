@@ -239,8 +239,7 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set('n', 'n', 'nzzzv')
 keymap.set('n', 'N', 'Nzzzv')
 
-
---cursor remains in same place append BOTTOM LINE TO END
+--cursor remains in same place append LINE BELOW TO CURRENT LINE
 keymap.set('n', 'J', 'mzJ`z')
 
 

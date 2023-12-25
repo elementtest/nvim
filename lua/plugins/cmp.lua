@@ -28,8 +28,8 @@ return     {
                     ['<C-k>'] = cmp.mapping.select_prev_item(),
                     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                    ['<C-Space>'] = cmp.mapping.complete(),
-                    ['<C-e>'] = cmp.mapping.abort(),
+                    ['<C-e>'] = cmp.mapping.complete(),
+                    ['z<leader>'] = cmp.mapping.abort(),
                     ['<CR>'] = cmp.mapping.confirm({ select = true }),
                 }),
                 sources = cmp.config.sources({
@@ -45,5 +45,4 @@ return     {
             )
         end
     }
-
 

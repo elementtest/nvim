@@ -45,6 +45,10 @@ local opt = vim.opt
 --see ~/.config/nvim/lua/plugins/treesitter.lua
 --press <C-x> control x 
 
+-- LSP (popup code suggestion) (configured in cmp.lua file)
+-- z + leader will abort the suggestion !(might cause problems)
+-- enter key will complete the suggeestion
+
 --<<<<KEYMAPS>>>>--
 
 -- Behaviour

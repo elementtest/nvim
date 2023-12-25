@@ -249,9 +249,8 @@ keymap.set('n', 'J', 'mzJ`z')
 -- use yiw to yank word / whatever then viw to highlight then use
 keymap.set('x', '<leader>p', "\"_dP")
 
---puts stuff into the system clipboard
--- i.e. leader y then ap will yank the paragraph
--- look on bottom right to see register (where the text is yanked)
+--selects system clipboard register
+--THEN can put stuff inside it.  i.e. ap (around paragraph)
 keymap.set('n', '<leader>y', "\"+y")
 keymap.set('v', '<leader>y', "\"+y")
 keymap.set('n', '<leader>y', "\"+y")

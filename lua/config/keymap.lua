@@ -225,8 +225,7 @@ keymap.set('n', '<leader>n', ':InspectTree<CR>')
 keymap.set("n", "<leader>q", ":confirm qall<CR>")
 
 -- skip forward one or two lines in insert mode
-keymap.set('i', '8<space>', '<right>')
-keymap.set('i', '9<space>', '<right><right>')
+keymap.set('i', 'z<space>', '<right>')
 
 -- BLOCK MOVE LINES UP OR DOWN (visual mode)
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")

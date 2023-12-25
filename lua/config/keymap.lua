@@ -254,3 +254,6 @@ keymap.set('x', '<leader>p', "\"_dP")
 keymap.set('n', '<leader>y', "\"+y")
 keymap.set('v', '<leader>y', "\"+y")
 keymap.set('n', '<leader>y', "\"+y")
+
+
+

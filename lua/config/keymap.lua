@@ -229,7 +229,7 @@ keymap.set('n', '<leader>n', ':InspectTree<CR>')
 keymap.set("n", "<leader>q", ":confirm qall<CR>")
 
 -- skip forward one or two lines in insert mode
-keymap.set('i', 'z<space>', '<right>')
+keymap.set('i', '8<leader>', '<right>')
 
 -- BLOCK MOVE LINES UP OR DOWN (visual mode)
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -246,6 +246,12 @@ keymap.set('n', 'N', 'Nzzzv')
 keymap.set('n', 'J', 'mzJ`z')
 
 -- paste into highlighted word and repeat without problems
+-- use yiw to yank word / whatever then viw to highlight then use
 keymap.set('x', '<leader>p', "\"_dP")
 
-
+--puts stuff into the system clipboard
+-- i.e. leader y then ap will yank the paragraph
+-- look on bottom right to see register (where the text is yanked)
+keymap.set('n', '<leader>y', "\"+y")
+keymap.set('v', '<leader>y', "\"+y")
+keymap.set('n', '<leader>y', "\"+y")

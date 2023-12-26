@@ -53,6 +53,8 @@ BASH ERRORS <<WHEN RUNNING :checkhealth under treesitter>>
 HOW TO FIX:  Run :TSInstall bash and then TSUpdate
 updates the installed parsers
 
+VIMDOC ERRORS 
+HOW TO FIX:  :TSInstall vimdoc then TSUpdate
 
 <<<<<<<<<<<<<<<< PLUGINS >>>>>>>>>>>>>>>>>>>
 <<<FORMAT 1>>>

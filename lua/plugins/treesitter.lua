@@ -42,7 +42,7 @@ return {
           enable = true,
           keymaps = {
             init_selection = "<C-x>",
-            node_incremental = "<C-space>",
+            node_incremental = "<C-x>",
             scope_incremental = false,
             node_decremental = "<bs>",
           },

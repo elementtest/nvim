@@ -255,5 +255,5 @@ keymap.set('n', '<leader>y', "\"+y")
 keymap.set('v', '<leader>y', "\"+y")
 keymap.set('n', '<leader>y', "\"+y")
 
-
-
+-- LSP opens a hover box with information about code
+keymap.set('n', 'K', vim.lsp.buf.hover)

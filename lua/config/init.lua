@@ -22,8 +22,8 @@ local opts = {
 		lazy = true,
     --by default plugins are NOT lazy loaded
 	},
-	install = {
-		colorscheme = { "nightfly" },
+	 install = {
+	 	 colorscheme = { "nightfly" },
 	},
 	rtp = {
 		disabled_plugins = {

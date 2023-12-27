@@ -102,7 +102,7 @@ vim.o.number = true
 -- VISUAL LINE INDENTATION MAKING INDENTS EASIER TO SEE
 -- list enables special characters to be displayed
 -- listchars will insert a | for every two spaces of indent 
--- showmatch will highlight matching {[""]} when hovered over it
+-- showmatch will highlight matching {[""]} when put over it
 vim.opt.list = true
 vim.opt.listchars = { tab = "  ", leadmultispace = '│   ' }
 vim.opt.showmatch = true

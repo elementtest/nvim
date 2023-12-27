@@ -117,7 +117,7 @@ vim.opt.shortmess:append({ I = true })
 -- tabs and indentation 
 -- tabstop : every tab hit will insert TWO spaces
 -- shiftwidth : number of spaces used at each level of indent
--- expandtab : replace tab chars with spaces from shiftwidth settin
+-- expandtab : replace tab chars with spaces from shiftwidth setting
 -- autoindent : adjusts new line based on indent of previous line
 -- softtabstop : number of spaces in insert mode for a tab hit
 -- smartindent : adjust indent of new line based on previous one

@@ -229,6 +229,7 @@ keymap.set('n', '<leader>n', ':InspectTree<CR>')
 keymap.set("n", "<leader>q", ":confirm qall<CR>")
 
 -- skip forward one or two lines in insert mode
+-- i.e. jump cursor out of [] when stuck inside
 keymap.set('i', '<S-Tab>', '<right>')
 
 -- BLOCK MOVE LINES UP OR DOWN (visual mode)

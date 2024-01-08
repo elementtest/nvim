@@ -229,7 +229,7 @@ keymap.set('n', '<leader>n', ':InspectTree<CR>')
 keymap.set("n", "<leader>q", ":confirm qall<CR>")
 
 -- skip forward one or two lines in insert mode
-keymap.set('i', '8<leader>', '<right>')
+keymap.set('i', '<S-Tab>', '<right>')
 
 -- BLOCK MOVE LINES UP OR DOWN (visual mode)
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -257,3 +257,4 @@ keymap.set('n', '<leader>y', "\"+y")
 
 -- LSP opens a hover box with information about code
 keymap.set('n', 'K', vim.lsp.buf.hover)
+

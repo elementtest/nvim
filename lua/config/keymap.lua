@@ -183,7 +183,7 @@ keymap.set("n", "<S-right>", "<C-d>zz")
 keymap.set("n", "<leader>sv", "<C-w>v") --split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") --split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") --make windows equal width
-keymap.set("n", "<leader>sx", ":close<CR>") --close current split window
+keymap.set("n", "<leader>sc", ":close<CR>") --close split window
 keymap.set("n", "<leader>0", "<C-w>l") --  >> move to right 
 keymap.set("n", "<leader>9", "<C-w>h") --  >> move to left window
 keymap.set("n", "<leader>j", "<C-w>j") --  >> move down a window
@@ -257,5 +257,5 @@ keymap.set('v', '<leader>y', "\"+y")
 keymap.set('n', '<leader>y', "\"+y")
 
 -- LSP opens a hover box with information about code
-keymap.set('n', 'K', vim.lsp.buf.hover)
+keymap.set('n', 'K', vim.lsp.buf.references)
 

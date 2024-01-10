@@ -194,7 +194,7 @@ keymap.set("n", "<leader>k", "<C-w>k") --  >> move up a window
 keymap.set("n", "<leader>o", "o<Esc>0")
 
 -- ADD LINE UNDER COMMENT IN INSERT MODE (NO COMMENT MODE)
-keymap.set("n", "<leader>c", "o<Esc>0xxi")
+keymap.set("n", "<leader>c", "<down>O")
 
 --JUMP TO END OF LINE IN INSERT MODE
 keymap.set("i", "<S-Tab>", "<Esc>A")

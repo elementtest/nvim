@@ -50,6 +50,11 @@ return     {
                 "javascriptreact",
               }
             })
+            lspconfig.emmet_language_server.setup({
+                filetypes = {"css", "html", "javascript"},
+                on_attach = custom_attach,
+                capabilities = capabilities
+            })
 
             -- new server goes here:
             -- lspconfig.SERVER.setup({

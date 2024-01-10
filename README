@@ -32,12 +32,12 @@ it can be a function or it can be a table
 used to grab EXTERNAL stuff, ie modules folders etc
 
 TO DO LIST:::
-1.  Go through Primeagen key bindings
+DONE1.  Go through Primeagen key bindings
 2.  Text objects tree sitter?  
 3.  Folke Lazy nvim structurign your plugins research
 4.  diagnostics and formatter (prettier?) and linter
 5.  buffers and switching between them fluidly
-6.  cmp control space change to something else.  
+DONE6.  cmp control space change to something else.  
 
 ERROR:  
 WARNING {nvim-tree.lua}: setting a table to `Plugin.config` is deprecated. Please use `Plugin.opts` instead

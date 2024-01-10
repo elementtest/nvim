@@ -110,7 +110,7 @@ vim.opt.showmatch = true
 
 
 -- NEOVIM intro screen 
-vim.opt.shortmess:append({ I = true })
+-- vim.opt.shortmess:append({ I = true })
 -- suppresses intro screen message 
 -- use :intro to open 
 
@@ -153,7 +153,7 @@ vim.o.mouse = "v"
 -- ie when hit leader key how long do you have to press next key
 -- see above... how long will it "listen" for the space key after
 -- the 8 or 9 is hit
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 350
 
 -- <<<<<<<REMAPS>>>>>>>
 -- when you delete or change a word it will include the -

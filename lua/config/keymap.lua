@@ -204,10 +204,10 @@ keymap.set("i", "<S-Tab>", "<Esc>A")
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>",
 { noremap = true, silent = true})
 
---Indenting 
+--Indent>
 --indents in normal mode 
-keymap.set("v", "<", "<gv")
-keymap.set("v", ">", ">gv")
+keymap.set("n", "<", "<gv")
+keymap.set("n", ">", ">gv")
 
 --move selected lines up or down with alt key
 keymap.set('n', '<A-k>', ':m .-2<cr>==')

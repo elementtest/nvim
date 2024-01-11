@@ -260,5 +260,5 @@ keymap.set('n', '<leader>y', "\"+y")
 -- LSP opens a hover box with information about code
 keymap.set('n', 'K', vim.lsp.buf.hover)
 
---TEST format indent of entire document
+-- Select entire document and format indents with = 
 keymap.set('n', '<leader>g', 'ggVG=')

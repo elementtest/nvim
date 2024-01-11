@@ -197,7 +197,11 @@ keymap.set("n", "<leader>o", "o<Esc>0")
 keymap.set("n", "<leader>c", "<down>O")
 
 --JUMP TO END OF LINE IN INSERT MODE
-keymap.set("i", "<S-Tab>", "<Esc>A")
+keymap.set("i", "9<leader>", "<Esc>A")
+
+-- skip forward one or two lines in insert mode
+-- i.e. jump cursor out of [] when stuck inside
+keymap.set('i', '8<leader>', '<right>')
 
 -- NVIM TREE
 -- opens file explorer on left
@@ -228,9 +232,6 @@ keymap.set('n', '<leader>n', ':InspectTree<CR>')
 -- if buffer configured prompts if user wants save
 keymap.set("n", "<leader>q", ":confirm qall<CR>")
 
--- skip forward one or two lines in insert mode
--- i.e. jump cursor out of [] when stuck inside
-keymap.set('i', '<S-Tab>', '<right>')
 
 -- BLOCK MOVE LINES UP OR DOWN (visual mode)
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")

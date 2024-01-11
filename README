@@ -38,6 +38,7 @@ DONE1.  Go through Primeagen key bindings
 4.  diagnostics and formatter (prettier?) and linter
 5.  buffers and switching between them fluidly
 DONE6.  cmp control space change to something else.  
+7.  make jump out of [''] work with LSP
 
 ERROR:  
 WARNING {nvim-tree.lua}: setting a table to `Plugin.config` is deprecated. Please use `Plugin.opts` instead

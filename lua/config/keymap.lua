@@ -49,6 +49,12 @@ local opt = vim.opt
 -- z + leader will abort the suggestion !(might cause problems)
 -- enter key will complete the suggeestion
 
+-- LIVE SERVER 
+-- run live-server from terminal to start
+-- or open up folder with vim . 
+-- then :LiveServer to start it
+-- LiveServerStart or LiveServerStop will do accordingly
+
 --<<<<KEYMAPS>>>>--
 
 -- Behaviour

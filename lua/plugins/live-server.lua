@@ -1,5 +1,5 @@
 return {
-    --live server to see web page changes live 
+    --live server to see web page changes live run :LiveServer on webpage
     --see keymap for more info
     'aurum77/live-server.nvim',
     config = function()

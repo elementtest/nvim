@@ -33,8 +33,8 @@ used to grab EXTERNAL stuff, ie modules folders etc
 
 TO DO LIST:::
 DONE1.  Go through Primeagen key bindings
-2.  Text objects tree sitter?  
-3.  Folke Lazy nvim structurign your plugins research
+2.  Text objects tree sitter?(for combing through large code)
+DONE3.  Folke Lazy nvim structurign your plugins research
 4.  diagnostics and formatter (prettier?) and linter(maybe)
 5.  buffers and switching between them fluidly
 DONE6.  cmp control space change to something else.  

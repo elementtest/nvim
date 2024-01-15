@@ -39,6 +39,7 @@ DONE3.  Folke Lazy nvim structurign your plugins research
 5.  buffers and switching between them fluidly
 DONE6.  cmp control space change to something else.  
 DONE7.  make jump out of [''] work with LSP
+8.  vim surround plugin to surround certain things in html 
 
 ERROR:  
 WARNING {nvim-tree.lua}: setting a table to `Plugin.config` is deprecated. Please use `Plugin.opts` instead

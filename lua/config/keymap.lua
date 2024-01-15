@@ -55,6 +55,12 @@ local opt = vim.opt
 -- then :LiveServer to start it
 -- LiveServerStart or LiveServerStop will do accordingly
 
+-- SURROUND NVIM
+-- surround text with [] {} '' etc 
+-- begins with You Surround i.e. ysiw ysa" ysl* yst]' etc 
+-- can also Delet Surround i.e. ds( ds" etc 
+-- :h nvim-surround.usage for help
+
 --<<<<KEYMAPS>>>>--
 
 -- Behaviour

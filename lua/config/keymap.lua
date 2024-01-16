@@ -54,6 +54,8 @@ local opt = vim.opt
 -- or open up folder with vim . 
 -- then :LiveServer to start it
 -- LiveServerStart or LiveServerStop will do accordingly
+-- PROBLEM not allowing changing of browser easily 
+-- for now edited bash rc file "live" alias to launch it
 
 -- SURROUND NVIM
 -- surround text with [] {} '' etc 

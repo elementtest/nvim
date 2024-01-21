@@ -210,8 +210,8 @@ keymap.set("n", "<leader>o", "o<Esc>0")
 -- ADD LINE UNDER COMMENT IN INSERT MODE (NO COMMENT MODE)
 keymap.set("n", "<leader>c", "<down>O")
 
---JUMP TO END OF LINE IN INSERT MODE
-keymap.set("i", "9<leader>", "<Esc>A")
+--JUMP TO END OF LINE IN INSERT MODE and add ; SAVE and new line
+keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>o")
 
 -- skip forward one or two lines in insert mode
 -- i.e. jump cursor out of [] when stuck inside
@@ -276,3 +276,6 @@ keymap.set('n', 'K', vim.lsp.buf.hover)
 
 -- Select entire document and format indents with = 
 keymap.set('n', '<leader>g', 'ggVG=')
+
+-- quick save :w
+keymap.set('n', '<leader>w', ':w<CR>')

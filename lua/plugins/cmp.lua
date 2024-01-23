@@ -47,7 +47,7 @@ return     {
                 end),
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
                     ['<C-e>'] = cmp.mapping.complete(),
-                    ['z<leader>'] = cmp.mapping.abort(),
+                    ['8<leader>'] = cmp.mapping.abort(),
                     ['<CR>'] = cmp.mapping.confirm({ select = true }),
                 }),
                 --order is important

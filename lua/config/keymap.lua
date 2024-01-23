@@ -215,7 +215,7 @@ keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>o")
 
 -- skip forward one or two lines in insert mode
 -- i.e. jump cursor out of [] when stuck inside
-keymap.set('i', '8<leader>', '<right>')
+keymap.set('i', 'z<leader>', '<right>')
 
 -- NVIM TREE
 -- opens file explorer on left

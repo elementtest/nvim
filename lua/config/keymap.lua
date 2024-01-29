@@ -176,8 +176,7 @@ vim.opt.timeoutlen = 350
 -- using x key to delete DOES NOT add put in register
 keymap.set("n", "x", '"_x')
 
--- to UN HIGHLIGHT PRESS space leader then hh
--- think hh == hide highlights
+-- unhighlight search AND switch windows
 keymap.set("n", "<Tab>", "<Cmd>nohlsearch<CR><C-W>w")
 
 

@@ -55,6 +55,11 @@ return     {
                 on_attach = custom_attach,
                 capabilities = capabilities
             })
+            lspconfig.cssls.setup({
+                filetypes = {"css"},
+                on_attach = custom_attach,
+                capabilities = capabilities
+            })
 
             -- new server goes here:
             -- lspconfig.SERVER.setup({

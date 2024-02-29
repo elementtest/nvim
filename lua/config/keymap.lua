@@ -17,6 +17,7 @@ local opt = vim.opt
 
 -- FONT USED
 -- font used is JetBrainsMono Nerd Font Mono
+-- GNOME TERMINAL:  font stored in ~/.local/share/fonts
 
 -- JUMP LIST
 -- keeps track of movements in a file 

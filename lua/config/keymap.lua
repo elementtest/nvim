@@ -18,6 +18,11 @@ local opt = vim.opt
 -- FONT USED
 -- font used is JetBrainsMono Nerd Font Mono
 -- GNOME TERMINAL:  font stored in ~/.local/share/fonts
+-- POPOS NOTES:  installed nerd font, used install script from Sean Breckenridge
+-- for script to work must create folder in ~/bin/patched-fonts
+-- in this folder you put the font you want installed on your system
+-- after that in ~/.config/alacritty/ you need to open alacritty.yml file
+-- then edit it
 
 -- JUMP LIST
 -- keeps track of movements in a file 

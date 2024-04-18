@@ -31,16 +31,6 @@ it can be a function or it can be a table
 <<REQUIRE>>
 used to grab EXTERNAL stuff, ie modules folders etc
 
-TO DO LIST:::
-DONE1.  Go through Primeagen key bindings
-2.  Text objects tree sitter?(for combing through large code)
-DONE3.  Folke Lazy nvim structurign your plugins research
-4.  diagnostics and formatter (prettier?) and linter(maybe)
-5.  buffers and switching between them fluidly
-DONE6.  cmp control space change to something else.  
-DONE7.  make jump out of [''] work with LSP
-DONE8.  vim surround plugin to surround certain things in html 
-
 ERROR:  
 WARNING {nvim-tree.lua}: setting a table to `Plugin.config` is deprecated. Please use `Plugin.opts` instead
 HOW TO FIX IT:: conf usually used as a table had to go in and replace 

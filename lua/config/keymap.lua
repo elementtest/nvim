@@ -275,11 +275,9 @@ keymap.set('n', '<leader>y', "\"+y")
 keymap.set('v', '<leader>y', "\"+y")
 keymap.set('n', '<leader>y', "\"+y")
 
--- LSP opens a hover box with information about code
-keymap.set('n', 'K', vim.lsp.buf.hover)
 
 -- Select entire document and format indents with = 
-keymap.set('n', '<leader>g', 'ggVG=')
+keymap.set('n', '<leader>g', 'ggVG=<C-o>')
 
 -- quick save :w
 keymap.set('n', '<leader>w', ':w<CR>')

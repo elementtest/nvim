@@ -1,4 +1,3 @@
--- completion plugin for neovim 
 return     {
         'hrsh7th/nvim-cmp',
         event = 'InsertEnter',
@@ -24,34 +23,12 @@ return     {
                     documentation = cmp.config.window.bordered()
                 },
                 mapping = cmp.mapping.preset.insert({
-                    -- ['<C-j>'] = cmp.mapping.select_next_item(),
-                    -- ['<C-k>'] = cmp.mapping.select_prev_item(),
                     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-
-                  -- Select the next item
-                ["<Tab>"] = cmp.mapping(function(fallback)
-              if cmp.visible() then
-                cmp.select_next_item()
-              else
-                fallback()
-              end
-            end),
-
-                -- Select the previous item
-                ["<S-Tab>"] = cmp.mapping(function(fallback)
-                  if cmp.visible() then
-                    cmp.select_prev_item()
-                  else
-                    fallback()
-                  end
-                end),
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                    ['<C-e>'] = cmp.mapping.complete(),
+                    ['<C-Space>'] = cmp.mapping.complete(),
                     ['<C-e>'] = cmp.mapping.abort(),
                     ['<CR>'] = cmp.mapping.confirm({ select = true }),
                 }),
-                --order is important
-                --determines priority of appear in completion menu
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },
                     { name = 'luasnip' },

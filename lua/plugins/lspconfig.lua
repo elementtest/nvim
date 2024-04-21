@@ -53,6 +53,7 @@ return     {
             lspconfig.emmet_language_server.setup({
                 filetypes = {"css", "html", "javascript"},
                 on_attach = custom_attach,
+                root_dir = vim.loop.cwd,
                 capabilities = capabilities
             })
             lspconfig.cssls.setup({

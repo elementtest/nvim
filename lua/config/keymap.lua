@@ -47,7 +47,7 @@ local opt = vim.opt
 
 -- TREESITTER NODE SHORTCUT
 -- (called incremental selection)
---Select bigger and bigger chunks of code going outward 
+-- can be used for other keyboard shortcuts (selecting code sections)
 --see ~/.config/nvim/lua/plugins/treesitter.lua
 --press <C-x> control x 
 

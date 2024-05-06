@@ -101,7 +101,7 @@ vim.o.title = true
 -- termguicolors == required by many plugins / terminal color support
 -- colorcolumn visually draws arbitrary line (see right) >>>>
 -- signcolumn displays "signs" ie breakpoints, git markers, etc
--- !scrolloff # is minimum number of lines to keep above/below cursor
+-- !scrolloff # is minimum amount of lines to keep above/below cursor
 -- completeopt:
 -- menuone display popup menu even if only one match
 -- noinsert do not automatically insert the first match

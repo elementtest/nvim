@@ -187,7 +187,7 @@ vim.opt.virtualedit = "block"
 keymap.set("n", "x", '"_x')
 
 -- unhighlight search AND switch windows
-keymap.set("n", "<Tab>", "<Cmd>nohlsearch<CR><C-W>w")
+keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-W>w")
 
 
 -- REMAP arrow keys to scrolling keys 

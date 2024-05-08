@@ -183,6 +183,9 @@ vim.opt.timeoutlen = 350
 vim.opt.virtualedit = "block"
 
 
+-- SPLIT windows open on BOTTOM not top
+vim.o.splitbelow = true
+
 -- using x key to delete DOES NOT add put in register
 keymap.set("n", "x", '"_x')
 

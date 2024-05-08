@@ -135,7 +135,7 @@ vim.opt.showmatch = true
 -- use :intro to open 
 
 -- tabs and indentation 
--- tabstop : every tab hit will insert TWO spaces
+-- tabstop : every tab hit will insert FOUR spaces
 -- shiftwidth : number of spaces used at each level of indent
 -- expandtab : replace tab chars with spaces from shiftwidth setting
 -- autoindent : adjusts new line based on indent of previous line

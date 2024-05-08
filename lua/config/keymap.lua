@@ -229,8 +229,8 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>",
 
 --Indent>
 --indents in normal mode 
-keymap.set("n", "<", "<gv")
-keymap.set("n", ">", ">gv")
+keymap.set("n", "<", "<")
+keymap.set("n", ">", ">")
 
 --move selected lines up or down with alt key
 keymap.set('n', '<A-k>', ':m .-2<cr>==')

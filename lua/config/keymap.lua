@@ -89,6 +89,7 @@ vim.o.backspace = "indent,eol,start"
 --  if cursor is at the beginning of current line 
 --  start >> move to end of previous line when at beginning of file
 --  im guessing move to a different file ?? when at start of file??
+--  clipboard synchronizes system clipboard with the neovim clipboard 
 vim.o.encoding = "UTF-8"
 vim.o.clipboard = "unnamedplus"
 

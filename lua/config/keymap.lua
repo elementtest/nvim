@@ -179,6 +179,10 @@ vim.opt.timeoutlen = 350
 -- when you delete or change a word it will include the -
 -- opt.iskeyword:append("-")
 
+-- VISUAL BLOCK MODE (at end of line block will extend BEYOND into nill space)
+vim.opt.virtualedit = "block"
+
+
 -- using x key to delete DOES NOT add put in register
 keymap.set("n", "x", '"_x')
 

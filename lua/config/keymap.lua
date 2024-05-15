@@ -94,6 +94,7 @@ vim.o.encoding = "UTF-8"
 vim.o.clipboard = "unnamedplus"
 
 
+
 -- display file path and file name at VERY top of terminal
 vim.o.title = true
 

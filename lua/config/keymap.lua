@@ -182,7 +182,7 @@ vim.opt.timeoutlen = 350
 -- VISUAL BLOCK MODE (at end of line block will extend BEYOND into nill space)
 vim.opt.virtualedit = "block"
 
--- SHOW PREVIEW OF ALL CHANGES FROM :%s/foo/bar
+-- SHOW PREVIEW OF ALL CHANGES FROM :%s/foo/bar ON BOTTOM OF SCREEN
 vim.opt.inccommand = "split"
 
 -- SPLIT windows open on BOTTOM not top

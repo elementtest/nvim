@@ -1,6 +1,7 @@
 return     {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
+        -- TS MEANS TREE SITTER
         config = function()
             -- ENABLES THIS IF USING WINDOWS:
             -- require('nvim-treesitter.install').compilers = { 'zig' } 

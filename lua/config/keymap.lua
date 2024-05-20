@@ -218,6 +218,8 @@ keymap.set("n", "<leader>0", "<C-w>l") --  >> move to right
 keymap.set("n", "<leader>9", "<C-w>h") --  >> move to left window
 keymap.set("n", "<leader>j", "<C-w>j") --  >> move down a window
 keymap.set("n", "<leader>k", "<C-w>k") --  >> move up a window
+keymap.set('n', '<C-Left>', '<Cmd>vertical resize -2<CR>')
+keymap.set('n', '<C-Right>', '<Cmd>vertical resize +2<CR>')
 
 
 -- ADD LINE WITHOUT GOING INTO INSERT MODE

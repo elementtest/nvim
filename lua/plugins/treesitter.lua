@@ -14,6 +14,17 @@ return     {
                 highlight = {
                     enable = true,
                 },
+
+                incremental_selection = {
+                    enable = true,
+                    keymayps = {
+                        init_selection = "gnn",
+                        node_incremencal = "grn",
+                        scope_incremectal = "grc",
+                        node_decremental = "grm",
+                    },
+                },
+
             }
         end
     }

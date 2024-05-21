@@ -1,6 +1,6 @@
 -- set spacebar as mapleader key
 --<<<<VARIABLES>>>>>
-vim.g.mapleader = " "
+vim.g.mapleader = " ";
 --variable to make writing faster
 local keymap = vim.keymap
 -- variable make it easier to write out many options

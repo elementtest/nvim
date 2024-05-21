@@ -15,12 +15,12 @@ return     {
                     enable = true,
                 },
 
-                incremental_selection = {
+               incremental_selection = {
                     enable = true,
                     keymayps = {
                         init_selection = "gnn",
-                        node_incremencal = "grn",
-                        scope_incremectal = "grc",
+                        node_incremental = "grn",
+                        scope_incremental = "grc",
                         node_decremental = "grm",
                     },
                 },

@@ -192,6 +192,9 @@ vim.o.splitbelow = true
 -- using x key to delete DOES NOT add put in register
 keymap.set("n", "x", '"_x')
 
+-- JUMP TO FIRST NON-WHITE space character nonwhite space
+keymap.set('n', ',', '^')
+
 -- first part is un-highlighting search results
 -- second part is moves cursor to next window (if multiple open windows)
 keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-W>w")

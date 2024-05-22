@@ -11,9 +11,8 @@ local opt = vim.opt
 
 
 -- <<<<NOTES OTHER PLUGINS ETC>>>> --
---COMMENTS
+--COMMENTS (built in neovim)
 --to add a comment type gcc 
---see comment.nvim in lua/plugins folder
 
 -- FONT USED
 -- font used is JetBrainsMono Nerd Font Mono

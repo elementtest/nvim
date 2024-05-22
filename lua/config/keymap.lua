@@ -229,7 +229,8 @@ keymap.set('n', '<C-Right>', '<Cmd>vertical resize +2<CR>')
 keymap.set("n", "<leader>o", "o<Esc>0")
 
 -- ADD LINE UNDER COMMENT IN INSERT MODE (NO COMMENT MODE)
-keymap.set("n", "<leader>c", "<down>O")
+keymap.set("n", "<leader>c", "o<Esc>0C")
+
 
 --JUMP TO END OF LINE IN INSERT MODE and add ; SAVE and new line
 keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>o")
@@ -298,3 +299,5 @@ keymap.set('n', '<leader>g', 'ggVG=<C-o>')
 
 -- quick save :w
 keymap.set('n', '<leader>w', ':w<CR>')
+
+

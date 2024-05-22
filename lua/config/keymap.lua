@@ -257,7 +257,7 @@ keymap.set('n', '<A-j>', ':m .+1<cr>==')
 --think 1 looks like L or first thing that comes
 keymap.set('n', '<leader>1', ':Lazy<CR>')
 
-keymap.set('n', '<leader>n', ':InspectTree<CR>')
+keymap.set('n', '<leader>t', ':InspectTree<CR>')
 -- opens a syntax tree for the current file
 --can see all the nodes in the document 
 --type :InspectTree

@@ -224,6 +224,7 @@ keymap.set('n', '<C-Left>', '<Cmd>vertical resize -2<CR>')
 keymap.set('n', '<C-Right>', '<Cmd>vertical resize +2<CR>')
 
 
+
 -- ADD LINE WITHOUT GOING INTO INSERT MODE
 keymap.set("n", "<leader>o", "o<Esc>0")
 

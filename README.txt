@@ -96,5 +96,8 @@ timeout can be adjusted to set how long a leader key has to wait for
 the next key stroke 
 
 tab unhighlights might want to change this in future. 
-look into sway window manager
+look into sway tiling window manager
 look into dwm tiling window manager
+check out TMUX
+checkout live reload python program
+imperative VS funtional languages

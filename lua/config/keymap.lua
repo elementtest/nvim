@@ -192,7 +192,7 @@ vim.o.splitbelow = true
 keymap.set("n", "x", '"_x')
 
 -- JUMP TO FIRST NON-WHITE space character nonwhite space
-keymap.set('n', ',', '^')
+keymap.set('n', '<Tab>', '^')
 
 -- first part is un-highlighting search results
 -- second part is moves cursor to next window (if multiple open windows)

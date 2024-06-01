@@ -110,7 +110,7 @@ vim.o.title = true
 vim.o.termguicolors = true
 vim.o.colorcolumn = '100'
 vim.o.signcolumn = "yes"
-vim.o.scrolloff = 10
+vim.o.scrolloff = 999
 vim.o.completeopt = "menuone,noinsert,noselect"
 
 -- make relative line numbers

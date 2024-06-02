@@ -55,11 +55,10 @@ local opt = vim.opt
 -- enter key will complete the suggeestion
 
 -- LIVE SERVER 
--- run live-server from terminal to start
--- or open up folder with vim . 
--- then :LiveServer to start it
+-- open up folder with vim . 
+-- then :LiveServerStart to start it
 -- LiveServerStart or LiveServerStop will do accordingly
--- edited bash rc file "live" alias to launch it
+
 
 -- SURROUND NVIM
 -- surround text with [] {} '' etc 

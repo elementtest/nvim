@@ -233,6 +233,7 @@ keymap.set("n", "<leader>c", "o<Esc>0C")
 
 
 --JUMP TO END OF LINE IN INSERT MODE and add ; SAVE and new line
+--USED FOR JAVASCRIPT
 keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>o")
 
 
@@ -283,17 +284,6 @@ keymap.set('n', 'N', 'Nzzzv')
 
 --cursor remains in same place append LINE BELOW TO CURRENT LINE
 keymap.set('n', 'J', 'mzJ`z')
-
--- paste into highlighted word and repeat without problems
--- use yiw to yank word / whatever then viw to highlight then use
-keymap.set('x', '<leader>p', "\"_dP")
-
---selects system clipboard register
---THEN can put stuff inside it.  i.e. ap (around paragraph)
-keymap.set('n', '<leader>y', "\"+y")
-keymap.set('v', '<leader>y', "\"+y")
-keymap.set('n', '<leader>y', "\"+y")
-
 
 -- Select entire document and format indents with = 
 keymap.set('n', '<leader>g', 'ggVG=<C-o>')

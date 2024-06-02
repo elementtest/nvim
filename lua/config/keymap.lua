@@ -1,6 +1,6 @@
 -- set spacebar as mapleader key
 --<<<<VARIABLES>>>>>
-vim.g.mapleader = " ";
+vim.g.mapleader = " "
 --variable to make writing faster
 local keymap = vim.keymap
 -- variable make it easier to write out many options
@@ -85,7 +85,7 @@ vim.o.backspace = "indent,eol,start"
 --  if you're indented on new line and press backspace, it will 
 --  decrease indent level 
 --  eol >> allows backspace to move to previous line 
---  if cursor is at the beginning of current line 
+--  if cursor is at the beginning of current line  
 --  start >> move to end of previous line when at beginning of file
 --  im guessing move to a different file ?? when at start of file??
 --  clipboard synchronizes system clipboard with the neovim clipboard 
@@ -107,7 +107,7 @@ vim.o.title = true
 -- menuone display popup menu even if only one match
 -- noinsert do not automatically insert the first match
 -- !noselect do not automatically select first match 
-vim.o.termguicolors = true
+vim.o.termguicolors = true 
 vim.o.colorcolumn = '100'
 vim.o.signcolumn = "yes"
 vim.o.scrolloff = 999

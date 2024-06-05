@@ -290,4 +290,3 @@ keymap.set('n', '<leader>g', 'ggVG=<C-o>')
 -- quick save :w
 keymap.set('n', '<leader>w', ':w<CR>')
 
-

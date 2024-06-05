@@ -101,3 +101,4 @@ look into dwm tiling window manager
 check out TMUX
 checkout live reload python program
 imperative VS funtional languages
+r

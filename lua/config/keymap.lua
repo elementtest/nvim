@@ -235,6 +235,8 @@ keymap.set("n", "<leader>c", "o<Esc>0C")
 --USED FOR JAVASCRIPT
 keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>o")
 
+--GO TO END OF LINE in INSERT MODE
+keymap.set('i', 'jj', '<Esc><S-a>')
 
 -- skip forward one or two lines in insert mode
 -- i.e. jump cursor out of [] when stuck inside

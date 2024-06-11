@@ -5,9 +5,13 @@ return {
   -- Optional dependencies
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-      require('oil').setup({})
-      --open oil directory 
       vim.keymap.set('n', '-', '<CMD>Oil<CR>')
+      require('oil').setup({
+          keymaps = {
+            ['<C-S>'] = ':w<CR>',
+          }
+      })
+      --open oil directory // also goes up a directory while in oil
   end
 
 }

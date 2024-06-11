@@ -34,6 +34,9 @@ local opt = vim.opt
 -- use alt + n or alt + p to move through instances of
 -- search result that is highlighted
 
+-- gx-nvim.lua PLUGIN 
+-- use gx to open links inside the browser
+
 -- YANK COPY PASTE
 -- remap copy (saving to + register) (" indicates register)
 -- issue <<adds a trailing space>>

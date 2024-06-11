@@ -1,3 +1,5 @@
+-- file explorer with vim like motions i.e. o will open up a new line save and 
+-- new file will be created
 return {
   'stevearc/oil.nvim',
   opts = {},

@@ -11,6 +11,8 @@ return {
   config = function()
       vim.keymap.set('n', '-', '<CMD>Oil<CR>')
       require('oil').setup({
+          --send deleted files to trash instead of permanent delete
+          delete_to_trash = false,
           keymaps = {
               -- save changes that are made in oil
             ['<C-S>'] = ':w<CR>',

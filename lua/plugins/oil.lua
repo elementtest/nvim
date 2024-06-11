@@ -12,6 +12,7 @@ return {
       vim.keymap.set('n', '-', '<CMD>Oil<CR>')
       require('oil').setup({
           keymaps = {
+              -- save changes that are made in oil
             ['<C-S>'] = ':w<CR>',
           }
       })

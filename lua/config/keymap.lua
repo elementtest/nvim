@@ -295,3 +295,6 @@ keymap.set('n', '<leader>g', 'ggVG=<C-o>')
 -- quick save :w
 keymap.set('n', '<leader>w', ':w<CR>')
 
+-- remap PgUp and PgDn keys (Popos system)
+keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
+keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')

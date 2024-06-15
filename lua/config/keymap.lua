@@ -270,7 +270,7 @@ keymap.set('n', '<leader>t', ':InspectTree<CR>')
 --type :InspectTree
 
 -- EXIT NEOVIM SHIFT ZZ SHORTCUT!
--- if nothing exits
+-- if no buffers are changed then exits neovim 
 -- if buffer configured prompts if user wants save
 keymap.set("n", "<leader>q", ":confirm qall<CR>")
 

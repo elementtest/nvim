@@ -296,5 +296,6 @@ keymap.set('n', '<leader>g', 'ggVG=<C-o>')
 keymap.set('n', '<leader>w', ':w<CR>')
 
 -- remap PgUp and PgDn keys (Popos system)
+-- run nvim * to open up all files in folder
 keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
 keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')

@@ -299,6 +299,3 @@ keymap.set('n', '<leader>w', ':w<CR>')
 -- run nvim * to open up all files in folder
 keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
 keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
-
--- new buffer 
-keymap.set('n', '<leader>n', ':enew<CR>')

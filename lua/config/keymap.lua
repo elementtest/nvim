@@ -238,7 +238,7 @@ keymap.set("n", "<leader>c", "o<Esc>0C")
 keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>o")
 
 --GO TO END OF LINE in INSERT MODE
--- keymap.set('i', 'jj', '<Esc><S-a>')
+keymap.set('i', 'jj', '<Esc><S-a>')
 
 -- skip forward one or two lines in insert mode
 -- i.e. jump cursor out of [] when stuck inside
@@ -288,6 +288,7 @@ keymap.set('n', 'N', 'Nzzzv')
 --cursor remains in same place append LINE BELOW TO CURRENT LINE
 keymap.set('n', 'J', 'mzJ`z')
 
+-- FORMAT ENTIRE DOCUMENT
 -- Select entire document and format indents with = 
 keymap.set('n', '<leader>g', 'ggVG=<C-o>')
 

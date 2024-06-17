@@ -9,7 +9,6 @@ local opt = vim.opt
 -- noremap ???? It wont get remapped 
 -- silent ??? wont get any feedback in the terminal
 
-
 -- <<<<NOTES OTHER PLUGINS ETC>>>> --
 --COMMENTS (built in neovim)
 --to add a comment type gcc 
@@ -194,7 +193,7 @@ vim.o.splitbelow = true
 keymap.set("n", "x", '"_x')
 
 -- JUMP TO FIRST NON-WHITE space character nonwhite space
-keymap.set('n', '<Tab>', '^')
+keymap.set('n', 'z', '^')
 
 -- first part is un-highlighting search results
 -- second part is moves cursor to next window (if multiple open windows)
@@ -239,7 +238,7 @@ keymap.set("n", "<leader>c", "o<Esc>0C")
 keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>o")
 
 --GO TO END OF LINE in INSERT MODE
-keymap.set('i', 'jj', '<Esc><S-a>')
+-- keymap.set('i', 'jj', '<Esc><S-a>')
 
 -- skip forward one or two lines in insert mode
 -- i.e. jump cursor out of [] when stuck inside
@@ -295,10 +294,13 @@ keymap.set('n', '<leader>g', 'ggVG=<C-o>')
 -- quick save :w
 keymap.set('n', '<leader>w', ':w<CR>')
 
+-- BUFFERS 
 -- remap PgUp and PgDn keys (Popos system)
 -- run nvim * to open up all files in folder
 keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
 keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
+-- open new buffer 
+keymap.set('n', '<leader>n', ':enew<CR>')
 
 -- LIVESERVER START
 keymap.set('n', '<leader>h', '<Cmd>LiveServerStart<CR>')

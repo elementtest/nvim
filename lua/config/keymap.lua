@@ -193,6 +193,7 @@ vim.o.splitbelow = true
 keymap.set("n", "x", '"_x')
 
 -- JUMP TO FIRST NON-WHITE space character nonwhite space
+-- GO TO ZEEEE FIRST NON WHITE SPACE CHARACTER
 keymap.set('n', 'z', '^')
 
 -- first part is un-highlighting search results
@@ -280,11 +281,6 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- move lines down (Cap K)
 
-
---allow search terms to stay in the middle 
-keymap.set('n', 'n', 'nzzzv')
-keymap.set('n', 'N', 'Nzzzv')
-
 --cursor remains in same place append LINE BELOW TO CURRENT LINE
 keymap.set('n', 'J', 'mzJ`z')
 
@@ -294,7 +290,8 @@ keymap.set('n', '<leader>g', 'ggVG=<C-o>')
 
 -- quick save :w WRITE FILE
 keymap.set('i', 'ww', '<Esc>:w<CR>o')
-keymap.set('n', '<leader>w', '<Cmd>w<CR>')
+keymap.set('n', 'ww', '<Cmd>w<CR>')
+
 
 -- BUFFERS 
 -- remap PgUp and PgDn keys (Popos system)

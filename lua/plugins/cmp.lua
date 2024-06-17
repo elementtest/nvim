@@ -28,6 +28,7 @@ return     {
                 ['<C-Space>'] = cmp.mapping.complete(),
                 ['<C-e>'] = cmp.mapping.abort(),
                 ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                -- MAKE TAB AND SHIFT TAB GO UP AND DOWN CODE SUGGESTIONS IN LSP
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         cmp.select_next_item()

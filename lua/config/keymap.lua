@@ -301,4 +301,7 @@ keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
 keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
 
 -- LIVESERVER START
-keymap.set('n', '<leader>ls', '<Cmd>LiveServerStart<CR>')
+keymap.set('n', '<leader>h', '<Cmd>LiveServerStart<CR>')
+
+-- check if LSP enabled
+keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')

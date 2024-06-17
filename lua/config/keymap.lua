@@ -292,8 +292,9 @@ keymap.set('n', 'J', 'mzJ`z')
 -- Select entire document and format indents with = 
 keymap.set('n', '<leader>g', 'ggVG=<C-o>')
 
--- quick save :w
-keymap.set('n', '<leader>w', ':w<CR>')
+-- quick save :w WRITE FILE
+keymap.set('i', 'ww', '<Esc>:w<CR>o')
+keymap.set('n', '<leader>w', '<Cmd>w<CR>')
 
 -- BUFFERS 
 -- remap PgUp and PgDn keys (Popos system)

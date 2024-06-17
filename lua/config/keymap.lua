@@ -168,7 +168,7 @@ vim.o.incsearch = true
 
 -- MOUSE
 -- only active in "v" visual mode
-vim.o.mouse = "a"
+vim.o.mouse = "v"
 
 -- TIMEOUT 
 -- ie when hit leader key how long do you have to press next key

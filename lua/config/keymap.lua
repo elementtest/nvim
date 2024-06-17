@@ -299,3 +299,6 @@ keymap.set('n', '<leader>w', ':w<CR>')
 -- run nvim * to open up all files in folder
 keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
 keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
+
+-- LIVESERVER START
+keymap.set('n', '<leader>ls', '<Cmd>LiveServerStart<CR>')

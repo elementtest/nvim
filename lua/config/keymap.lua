@@ -289,7 +289,7 @@ keymap.set('n', 'J', 'mzJ`z')
 -- Select entire document and format indents with = 
 -- keymap.set('n', '<leader>g', 'ggVG=<C-o>')
 --TEST
-keymap.set('n', '<leader>g', 'ma ggVG= `a')
+keymap.set('n', '<leader>g', 'ggVG=')
 
 
 

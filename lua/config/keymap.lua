@@ -53,7 +53,6 @@ local opt = vim.opt
 --press <C-x> control x 
 
 -- LSP (popup code suggestion) (configured in cmp.lua file)
--- z + leader will abort the suggestion !(might cause problems)
 -- enter key will complete the suggeestion
 
 -- LIVE SERVER 

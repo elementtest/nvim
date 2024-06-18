@@ -36,7 +36,6 @@ return     {
                         fallback()
                     end
                 end),
-
                 -- Select the previous item
                 ["<S-Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then

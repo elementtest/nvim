@@ -16,6 +16,7 @@ return {
           keymaps = {
               -- save changes that are made in oil
             ['q'] = ':w<CR>',
+            ['<leader>q'] = 'actions.close',
           }
       })
       --open oil directory // also goes up a directory while in oil

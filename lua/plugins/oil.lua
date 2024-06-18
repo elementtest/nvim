@@ -15,7 +15,7 @@ return {
           delete_to_trash = false,
           keymaps = {
               -- save changes that are made in oil
-            ['<C-S>'] = ':w<CR>',
+            ['q'] = ':w<CR>',
           }
       })
       --open oil directory // also goes up a directory while in oil

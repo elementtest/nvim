@@ -286,7 +286,9 @@ keymap.set('n', 'J', 'mzJ`z')
 
 -- FORMAT ENTIRE DOCUMENT
 -- Select entire document and format indents with = 
-keymap.set('n', '<leader>g', 'ggVG=<C-o>')
+-- keymap.set('n', '<leader>g', 'ggVG=<C-o>')
+--TEST
+keymap.set('n', '<leader>g', 'ma ggVG= `a')
 
 -- quick save :w WRITE FILE
 keymap.set('i', 'ww', '<Esc>:w<CR>o')

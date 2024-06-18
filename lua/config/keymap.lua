@@ -301,8 +301,10 @@ keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
 -- open new buffer 
 keymap.set('n', '<leader>n', ':enew<CR>')
 
--- LIVESERVER START
+-- LIVE SERVER START
 keymap.set('n', '<leader>h', '<Cmd>LiveServerStart<CR>')
+-- LIVE SERVER STOP
+keymap.set('n', '<leader>s', '<Cmd>LiveServerStop<CR>')
 
 -- check if LSP enabled
 keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')

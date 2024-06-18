@@ -239,7 +239,9 @@ keymap.set("n", "<leader>c", "o<Esc>0C")
 keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>o")
 
 --GO TO END OF LINE in INSERT MODE
-keymap.set('i', 'jj', '<Esc><S-a>')
+keymap.set('i', 'jj', '<Esc><S-a><Cmd>w<CR>')
+-- quick save :w WRITE FILE
+keymap.set('n', '<leader>w', '<Esc>:w<CR>')
 
 -- skip forward one or two lines in insert mode
 -- i.e. jump cursor out of [] when stuck inside
@@ -290,9 +292,6 @@ keymap.set('n', 'J', 'mzJ`z')
 --TEST
 keymap.set('n', '<leader>g', 'ma ggVG= `a')
 
--- quick save :w WRITE FILE
-keymap.set('i', 'ww', '<Esc>:w<CR>o')
-keymap.set('n', 'ww', '<Cmd>w<CR>')
 
 
 -- BUFFERS 

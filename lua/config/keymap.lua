@@ -9,6 +9,8 @@ local opt = vim.opt
 -- noremap ???? It wont get remapped 
 -- silent ??? wont get any feedback in the terminal
 
+
+
 -- <<<<NOTES OTHER PLUGINS ETC>>>> --
 --COMMENTS (built in neovim)
 --to add a comment type gcc 
@@ -230,8 +232,10 @@ keymap.set('n', '<C-Right>', '<Cmd>vertical resize +2<CR>')
 keymap.set("n", "<leader>o", "o<Esc>0")
 
 -- ADD LINE UNDER COMMENT IN INSERT MODE (NO COMMENT MODE)
-keymap.set("n", "<leader>c", "o<Esc>0C")
+keymap.set("n", "<leader>c", "o<Esc>S")
 
+-- comment 
+--
 
 --JUMP TO END OF LINE IN INSERT MODE and add ; SAVE and new line
 --USED FOR JAVASCRIPT

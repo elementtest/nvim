@@ -5,6 +5,7 @@ return     {
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'L3MON4D3/LuaSnip' },
         -- Other:
+        -- cmp-path = auto suggests filesystem paths i.e. /home/elmt etc
         'hrsh7th/cmp-path',
     },
     config = function()

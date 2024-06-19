@@ -6,6 +6,7 @@ return     {
     -- it has different sources:  two of which are lsps and luasnip
     -- ***************              *********************
     'hrsh7th/nvim-cmp',
+    --config set to trigger on insertenter (activates when you enter insert mode)
     event = 'InsertEnter',
     dependencies = {
         { 'hrsh7th/cmp-nvim-lsp' },
@@ -15,9 +16,13 @@ return     {
         'hrsh7th/cmp-path',
     },
     config = function()
+        -- loads nvim-cmp
         local cmp = require('cmp')
+        -- loads nvim-autopairs integration for automatic bracket pairing 
         local cmp_ap = require('nvim-autopairs.completion.cmp')
+        -- loads luasnip
         local luasnip = require('luasnip')
+        -- initializes luasnip with default settings
         luasnip.config.setup {}
         cmp.setup({
             snippet = {
@@ -52,6 +57,10 @@ return     {
                     end
                 end),
             }),
+            -- ----------------- WHERE DOES CMP LOOK FOR COMPLETION -----------------
+            -- aka where are the sources cmp is looking at when it populates the 
+            -- completion menu
+            -- -----------------                                    -----------------
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
@@ -59,6 +68,7 @@ return     {
             }),
         })
         -- bracket completion for lua
+        -- ensures brackets are automatically completed after confirming selection
         cmp.event:on(
         'confirm_done',
         cmp_ap.on_confirm_done()

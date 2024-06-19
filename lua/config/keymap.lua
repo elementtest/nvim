@@ -312,3 +312,14 @@ keymap.set('n', '<leader>s', '<Cmd>LiveServerStop<CR>')
 
 -- check if LSP enabled
 keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')
+
+
+-- to do make this function work to insert the comment in normal mode in CSS 
+-- vim.keymap.set("<mode>", '<key>', 
+-- function()
+--     do something
+--     end)
+
+
+
+

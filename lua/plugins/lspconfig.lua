@@ -11,7 +11,9 @@ return     {
               --display NVIM version with LSP 
               local version_output = vim.fn.system('nvim --version')
               local version_number = string.match(version_output, 'NVIM%s+v(%d+%.%d+%.%d+)')
-                print("<LSP ATTACHED> NVIM: " .. version_number)
+              -- print message indicatign LSP has been attached.  disabled because annoying
+              -- use to debug?  
+                -- print("<LSP ATTACHED> NVIM: " .. version_number)
             end
             --0=============================================================================================0
             -- █░░ █░█ ▄▀█

@@ -1,8 +1,10 @@
 return     {
+    -- *************** WHAT THIS IS *********************
     -- CMP is a completion engine 
     -- responsible for showing entries that you want to autocomplete
     -- responsible for the little menu that pops up  
     -- it has different sources:  two of which are lsps and luasnip
+    -- ***************              *********************
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {

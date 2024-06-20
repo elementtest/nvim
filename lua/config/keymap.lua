@@ -313,13 +313,22 @@ keymap.set('n', '<leader>s', '<Cmd>LiveServerStop<CR>')
 -- check if LSP enabled
 keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')
 
-
--- to do make this function work to insert the comment in normal mode in CSS 
--- vim.keymap.set("<mode>", '<key>', 
+-- basic layout of combining a keymap to a function
+-- vim.keymap.set("<mode>", '<key>',
 -- function()
---     do something
---     end)
+-- do something
+-- end)
 
+-- CSS KEYMAP to expand star asterisk
+    vim.keymap.set('i', '<leader>*', function()
+        -- Insert the characters * { }
+        vim.api.nvim_put({ '* { }' }, 'c', true, true)
 
+        -- Move the cursor back inside the braces
+        local cursor = vim.api.nvim_win_get_cursor(0)
+        vim.api.nvim_win_set_cursor(0, { cursor[1], cursor[2] - 2 })
 
+        -- Simulate pressing the Enter key
+        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<CR>', true, false, true), 'n', true)
+    end, { noremap = true, silent = true })
 

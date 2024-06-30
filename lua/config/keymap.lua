@@ -320,7 +320,7 @@ keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')
 -- end)
 
 -- CSS KEYMAP to expand star asterisk
-    vim.keymap.set('i', '<leader>*', function()
+    vim.keymap.set('i', '*<leader>', function()
         -- Insert the characters * { }
         vim.api.nvim_put({ '* { }' }, 'c', true, true)
 

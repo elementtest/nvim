@@ -131,10 +131,6 @@ vim.opt.showmatch = true
 
 
 
--- NEOVIM startup intro screen 
--- vim.opt.shortmess:append({ I = true })
--- suppresses intro screen message 
--- use :intro to open 
 
 -- tabs and indentation 
 -- tabstop : every tab hit will insert FOUR spaces

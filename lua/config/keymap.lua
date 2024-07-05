@@ -315,3 +315,9 @@ keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')
 -- do something
 -- end)
 
+-- remove annoying asterisks generated in .css and .js files
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    command = "setlocal formatoptions-=ro"
+})
+

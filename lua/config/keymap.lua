@@ -139,7 +139,7 @@ vim.opt.showmatch = true
 -- autoindent : adjusts new line based on indent of previous line
 -- softtabstop : number of spaces in insert mode for a tab hit
 -- smartindent : adjust indent of new line based on previous one
--- TEST CHANGING ALL 2 NUMBERS TO 4 TO REVERSE CHANGE BACK TO 2
+-- CHANGING ALL 2 NUMBERS TO 4 TO REVERSE CHANGE BACK TO 2
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
@@ -288,7 +288,6 @@ keymap.set('n', 'J', 'mzJ`z')
 -- FORMAT ENTIRE DOCUMENT
 -- Select entire document and format indents with = 
 -- keymap.set('n', '<leader>g', 'ggVG=<C-o>')
---TEST
 keymap.set('n', '<leader>g', 'ggVG=')
 
 
@@ -302,7 +301,7 @@ keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
 keymap.set('n', '<leader>n', ':enew<CR>')
 
 -- LIVE SERVER START
-keymap.set('n', '<leader>h', '<Cmd>LiveServerStart<CR>')
+keymap.set('n', '<leader>h', 'Cmd>LiveServerStart<CR>')
 -- LIVE SERVER STOP
 keymap.set('n', '<leader>s', '<Cmd>LiveServerStop<CR>')
 

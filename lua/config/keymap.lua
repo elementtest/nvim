@@ -230,8 +230,12 @@ keymap.set("n", "<leader>o", "o<Esc>0")
 -- ADD LINE UNDER COMMENT IN INSERT MODE (NO COMMENT MODE)
 keymap.set("n", "<leader>c", "o<Esc>S")
 
--- comment 
---
+-- TTEST  control w in insert mode will save 
+keymap.set('i', '<C-w>', '<Esc>:w<CR>a')
+
+keymap.set('n', 'dd', 'dd<Cmd>:w<CR>')
+
+
 
 --JUMP TO END OF LINE IN INSERT MODE and add ; SAVE and new line
 --USED FOR JAVASCRIPT

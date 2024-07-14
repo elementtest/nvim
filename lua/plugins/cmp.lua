@@ -1,33 +1,39 @@
-return     {
+return {
     -- *************** WHAT THIS IS *********************
     -- CMP is a completion engine 
     -- responsible for showing entries that you want to autocomplete
     -- responsible for the little menu that pops up  
-    -- it has different sources:  two of which are lsps and luasnip
+    -- it has different sources: two of which are lsps and luasnip
     -- ***************              *********************
-    'hrsh7th/nvim-cmp',
-    --config set to trigger on insertenter (activates when you enter insert mode)
+    'hrsh7th/nvim-cmp', -- CMP plugin for neovim
     event = 'InsertEnter',
     dependencies = {
-        { 'hrsh7th/cmp-nvim-lsp' },
-        { 'L3MON4D3/LuaSnip' },
-        -- Other:
-        -- cmp-path = auto suggests filesystem paths i.e. /home/elmt etc
-        'hrsh7th/cmp-path',
+        { 'hrsh7th/cmp-nvim-lsp' }, --LSP Source for CMP
+        { 'L3MON4D3/LuaSnip' }, --LuaSnip for snippet support
+        'hrsh7th/cmp-path', --Auto suggest filesystem paths i.e. /home/elmt etc
+        'saadparwaiz1/cmp_luasnip', -- plugin that links Luasnip to CMP
     },
     config = function()
-        -- loads nvim-cmp
+        -- Load nvim-cmp
         local cmp = require('cmp')
-        -- loads nvim-autopairs integration for automatic bracket pairing 
-        local cmp_ap = require('nvim-autopairs.completion.cmp')
-        -- loads luasnip
+        -- Load LuaSnip
         local luasnip = require('luasnip')
-        -- initializes luasnip with default settings
-        luasnip.config.setup {}
+        -- Load nvim-autopairs integration
+        local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+
+        -- Define snippets
+        luasnip.config.setup({})
+        luasnip.add_snippets('css', {
+            luasnip.snippet('brd', {
+                luasnip.text_node('border: solid red 5px;')
+            })
+        })
+
+        -- Setup nvim-cmp
         cmp.setup({
             snippet = {
                 expand = function(args)
-                    require('luasnip').lsp_expand(args.body)
+                    luasnip.lsp_expand(args.body) -- use luasnip to expand snippets
                 end,
             },
             window = {
@@ -40,38 +46,33 @@ return     {
                 ['<C-Space>'] = cmp.mapping.complete(),
                 ['<C-e>'] = cmp.mapping.abort(),
                 ['<CR>'] = cmp.mapping.confirm({ select = true }),
-                -- MAKE TAB AND SHIFT TAB GO UP AND DOWN CODE SUGGESTIONS IN LSP
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         cmp.select_next_item()
+                    elseif luasnip.expand_or_jumpable() then
+                        luasnip.expand_or_jump()
                     else
                         fallback()
                     end
                 end),
-                -- Select the previous item
                 ["<S-Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         cmp.select_prev_item()
+                    elseif luasnip.jumpable(-1) then
+                        luasnip.jump(-1)
                     else
                         fallback()
                     end
                 end),
             }),
-            -- ----------------- WHERE DOES CMP LOOK FOR COMPLETION -----------------
-            -- aka where are the sources cmp is looking at when it populates the 
-            -- completion menu
-            -- -----------------                                    -----------------
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
                 { name = 'path' },
             }),
         })
-        -- bracket completion for lua
-        -- ensures brackets are automatically completed after confirming selection
-        cmp.event:on(
-        'confirm_done',
-        cmp_ap.on_confirm_done()
-        )
+
+        -- Configure autopairs
+        cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
     end
 }

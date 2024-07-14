@@ -193,9 +193,6 @@ keymap.set("n", "x", '"_x')
 -- GO TO ZEEEE FIRST NON WHITE SPACE CHARACTER
 keymap.set('n', 'z', '^')
 
--- first part is un-highlighting search results
--- second part is moves cursor to next window (if multiple open windows)
-keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-W>w")
 
 
 -- REMAP arrow keys to scrolling keys 
@@ -223,6 +220,9 @@ keymap.set('n', '<C-Left>', '<Cmd>vertical resize -2<CR>')
 keymap.set('n', '<C-Right>', '<Cmd>vertical resize +2<CR>')
 
 
+-- first part is un-highlighting search results
+-- second part is moves cursor to next window (if multiple open windows)
+keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-W>w")
 
 -- ADD LINE WITHOUT GOING INTO INSERT MODE
 keymap.set("n", "<leader>o", "o<Esc>0")

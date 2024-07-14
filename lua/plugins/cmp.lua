@@ -30,22 +30,23 @@ return {
         })
 
         -- Setup nvim-cmp
-        cmp.setup({
+        cmp.setup({ -- loads nvim-cmp
             snippet = {
                 expand = function(args)
                     luasnip.lsp_expand(args.body) -- use luasnip to expand snippets
                 end,
             },
             window = {
-                completion = cmp.config.window.bordered(),
-                documentation = cmp.config.window.bordered()
+                completion = cmp.config.window.bordered(), -- bordered completion window
+                documentation = cmp.config.window.bordered() -- bordered documentation window
             },
             mapping = cmp.mapping.preset.insert({
-                ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-                ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                ['<C-Space>'] = cmp.mapping.complete(),
-                ['<C-e>'] = cmp.mapping.abort(),
-                ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                ['<C-b>'] = cmp.mapping.scroll_docs(-4), -- scroll documentation up
+                ['<C-f>'] = cmp.mapping.scroll_docs(4), -- scroll documentation down
+                ['<C-Space>'] = cmp.mapping.complete(), -- trigger completion
+                ['<C-e>'] = cmp.mapping.abort(), -- abort completion
+                ['<CR>'] = cmp.mapping.confirm({ select = true }), -- confirm 
+                -- MAKE TAB AND SHIFT TAB GO UP AND DOWN CODE SUGGESTIONS IN LSP
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         cmp.select_next_item()
@@ -55,24 +56,30 @@ return {
                         fallback()
                     end
                 end),
+                -- select the previous item
                 ["<S-Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
-                        cmp.select_prev_item()
+                        cmp.select_prev_item() -- select previous item in completion
                     elseif luasnip.jumpable(-1) then
                         luasnip.jump(-1)
                     else
-                        fallback()
+                        fallback() -- use fallback if completion menu not visible
                     end
                 end),
             }),
+            -- ----------------- WHERE DOES CMP LOOK FOR COMPLETION -----------------
+            -- aka where are the sources cmp is looking at when it populates the 
+            -- completion menu
+            -- -----------------                                    -----------------
             sources = cmp.config.sources({
-                { name = 'nvim_lsp' },
-                { name = 'luasnip' },
-                { name = 'path' },
+                { name = 'nvim_lsp' },      --LSP source
+                { name = 'luasnip' },       -- LuaSnip source
+                { name = 'path' },          --path source
             }),
         })
 
-        -- Configure autopairs
+        -- bracket completion for lua
+        -- ensures brackets are automatically completed after confirming selection
         cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
     end
 }

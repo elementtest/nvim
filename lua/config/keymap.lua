@@ -230,10 +230,14 @@ keymap.set("n", "<leader>o", "o<Esc>0")
 -- ADD LINE UNDER COMMENT IN INSERT MODE (NO COMMENT MODE)
 keymap.set("n", "<leader>c", "o<Esc>S")
 
--- TTEST  control w in insert mode will save 
+-- Save in insert mode (Ctrl + w)
 keymap.set('i', '<C-w>', '<Esc>:w<CR>a')
 
 keymap.set('n', 'dd', 'dd<Cmd>:w<CR>')
+
+
+-- NODE execute in neovim
+keymap.set('n', '<leader>n', '<Cmd>!node %<CR>')
 
 
 
@@ -301,8 +305,6 @@ keymap.set('n', '<leader>g', 'ggVG=')
 -- run nvim * to open up all files in folder
 keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
 keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
--- open new buffer 
-keymap.set('n', '<leader>n', ':enew<CR>')
 
 -- LIVE SERVER START
 keymap.set('n', '<leader>h', '<Cmd>LiveServerStart<CR>')

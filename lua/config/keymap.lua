@@ -248,7 +248,7 @@ keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>o")
 --GO TO END OF LINE in INSERT MODE
 keymap.set('i', 'jj', '<Esc><S-a><Cmd>w<CR>')
 -- quick save :w WRITE FILE
-keymap.set('n', '<leader>w', '<Esc>:w<CR>')
+keymap.set('n', '<C-s>', '<Esc>:w<CR>')
 
 -- skip forward one or two lines in insert mode
 -- i.e. jump cursor out of [] when stuck inside

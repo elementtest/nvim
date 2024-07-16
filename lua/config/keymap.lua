@@ -231,7 +231,7 @@ keymap.set("n", "<leader>o", "o<Esc>0")
 keymap.set("n", "<leader>c", "o<Esc>S")
 
 -- Save in insert mode (Ctrl + w)
-keymap.set('i', '<C-w>', '<Esc>:w<CR>a')
+keymap.set('i', '<C-s>', '<Esc>:w<CR>a')
 
 keymap.set('n', 'dd', 'dd<Cmd>:w<CR>')
 

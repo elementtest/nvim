@@ -48,7 +48,7 @@ local opt = vim.opt
 --right now commenting out.  yy works fine for this purpose 
 --!USE BIG Y TO NOT HAVE A TRAILING SPACE COPIED
 
--- TREESITTER NODE SHORTCUT
+-- TREESITTER  SHORTCUT
 -- (called incremental selection)
 -- can be used for other keyboard shortcuts (selecting code sections)
 --see ~/.config/nvim/lua/plugins/treesitter.lua

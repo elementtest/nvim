@@ -148,7 +148,7 @@ vim.o.softtabstop = 4
 vim.o.smartindent = true
 
 
--- HYPHEN include when delete TTEST
+-- HYPHEN include when delete 
 opt.iskeyword:append("-")
 
 -- put line under cursor position

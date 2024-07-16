@@ -246,8 +246,10 @@ keymap.set('n', '<leader>n', '<Cmd>!node %<CR>')
 
 
 --JUMP TO END OF LINE IN INSERT MODE and add ; SAVE and new line
---USED FOR JAVASCRIPT
+--USED FOR JAVASCRIPT and CSS
 keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>")
+keymap.set("n", "9<leader>", "<Esc>A;<Esc>:w<CR>")
+
 
 --GO TO END OF LINE in INSERT MODE
 keymap.set('i', 'jj', '<Esc><S-a><Cmd>w<CR>')

@@ -329,3 +329,9 @@ vim.api.nvim_create_autocmd("FileType", {
     command = "setlocal formatoptions-=ro"
 })
 
+-- TTEST highlight yanked text for 150ms
+vim.api.nvim_create_autocmd('TextYankPost', {
+    callback = function()
+        vim.highlight.on_yank()
+    end
+})

@@ -296,9 +296,6 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- move lines down (Cap K)
 
---cursor remains in same place append LINE BELOW TO CURRENT LINE
-keymap.set('n', 'J', 'mzJ`z')
-
 -- FORMAT ENTIRE DOCUMENT
 -- Select entire document and format indents with = 
 -- keymap.set('n', '<leader>g', 'ggVG=<C-o>')

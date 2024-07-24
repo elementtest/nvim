@@ -309,10 +309,15 @@ keymap.set('n', '<leader>g', 'ggVG=')
 keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
 keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
 
+-- TTEST
+-- Stop and Restart Live Server with Delay
+keymap.set('n', '<leader>h', [[<Cmd>LiveServerStop<CR>:sleep 500m<CR>:LiveServerStart<CR>]])
+
+
 -- LIVE SERVER START
-keymap.set('n', '<leader>h', '<Cmd>LiveServerStart<CR>')
+-- keymap.set('n', '<leader>h', '<Cmd>LiveServerStart<CR>')
 -- LIVE SERVER STOP
-keymap.set('n', '<leader>s', '<Cmd>LiveServerStop<CR>')
+-- keymap.set('n', '<leader>s', '<Cmd>LiveServerStop<CR>')
 
 -- check if LSP enabled
 keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')

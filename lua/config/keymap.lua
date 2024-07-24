@@ -309,11 +309,11 @@ keymap.set('n', '<leader>g', 'ggVG=')
 keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
 keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
 
--- TTEST
--- Stop and Restart Live Server with Delay
+-- Stop and Restart Live Server with Delay in between
 keymap.set('n', '<leader>h', [[<Cmd>LiveServerStop<CR>:sleep 500m<CR>:LiveServerStart<CR>]])
 
 
+-- PREVIOUS shortcut configuration (try above first for a while before deleting)
 -- LIVE SERVER START
 -- keymap.set('n', '<leader>h', '<Cmd>LiveServerStart<CR>')
 -- LIVE SERVER STOP

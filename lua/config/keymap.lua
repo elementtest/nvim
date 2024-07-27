@@ -302,6 +302,9 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set('n', '<leader>g', 'ggVG=')
 
 
+-- TTEST 
+keymap.set("n", "u", "u:w<CR>")
+
 
 -- BUFFERS 
 -- remap PgUp and PgDn keys (Popos system)

@@ -302,7 +302,7 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set('n', '<leader>g', 'ggVG=')
 
 
--- TTEST 
+-- UNDO KEY WILL NOW SAVE
 keymap.set("n", "u", "u:w<CR>")
 
 

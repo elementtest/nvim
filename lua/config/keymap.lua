@@ -305,6 +305,8 @@ keymap.set('n', '<leader>g', 'ggVG=')
 -- UNDO KEY WILL NOW SAVE
 keymap.set("n", "u", "u:w<CR>")
 
+-- REDO KEY WILL NOW SAVE
+keymap.set('n', '<C-r>', '<C-r>:w<CR>')
 
 -- BUFFERS 
 -- remap PgUp and PgDn keys (Popos system)

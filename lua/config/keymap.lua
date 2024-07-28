@@ -232,7 +232,7 @@ keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-W>w")
 keymap.set("n", "<leader>o", "o<Esc>0")
 
 -- ADD LINE UNDER COMMENT IN INSERT MODE (NO COMMENT MODE)
-keymap.set("n", "<leader>c", "o<Esc>S")
+keymap.set("n", "<leader>c", "o<Esc>")
 
 -- Save in insert mode (Ctrl + w)
 keymap.set('i', '<C-s>', '<Esc>:w<CR>a')

@@ -228,7 +228,7 @@ keymap.set('n', '<C-Right>', '<Cmd>vertical resize +2<CR>')
 -- second part is moves cursor to next window (if multiple open windows)
 keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-W>w")
 
--- ADD LINE WITHOUT GOING INTO INSERT MODE
+-- ADD LINE / INSERT LINE WITHOUT GOING INTO INSERT MODE
 keymap.set("n", "<leader>o", "o<Esc>0")
 
 -- ADD LINE UNDER COMMENT IN INSERT MODE (NO COMMENT MODE)

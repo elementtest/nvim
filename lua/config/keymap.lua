@@ -148,9 +148,6 @@ vim.o.softtabstop = 4
 vim.o.smartindent = true
 
 
--- HYPHEN include when delete 
-opt.iskeyword:append("-")
-
 -- put line under cursor position
 opt.cursorline = true
 
@@ -178,9 +175,6 @@ vim.o.mouse = "v"
 vim.opt.timeoutlen = 350
 
 -- <<<<<<<REMAPS>>>>>>>
--- when you delete or change a word it will include the -
--- opt.iskeyword:append("-")
-
 -- VISUAL BLOCK MODE (at end of line block will extend BEYOND into nill space)
 vim.opt.virtualedit = "block"
 
@@ -192,6 +186,21 @@ vim.o.splitbelow = true
 
 -- using x key to delete DOES NOT add put in register
 keymap.set("n", "x", '"_x')
+
+-- when you delete or change a word it will include the -
+opt.iskeyword:append("-")
+
+-- delete in visual mode saves file
+keymap.set("v", "d", 'd:w<CR>')
+
+-- hitting delete saves file
+keymap.set('n', 'dd', 'dd<Cmd>:w<CR>')
+
+-- UNDO KEY WILL NOW SAVE
+keymap.set("n", "u", "u:w<CR>")
+
+-- REDO KEY WILL NOW SAVE
+keymap.set('n', '<C-r>', '<C-r>:w<CR>')
 
 -- JUMP TO FIRST NON-WHITE space character nonwhite space
 -- GO TO ZEEEE FIRST NON WHITE SPACE CHARACTER
@@ -237,7 +246,6 @@ keymap.set("n", "<leader>c", "o<Esc>")
 -- Save in insert mode (Ctrl + w)
 keymap.set('i', '<C-s>', '<Esc>:w<CR>a')
 
-keymap.set('n', 'dd', 'dd<Cmd>:w<CR>')
 
 
 -- NODE execute in neovim
@@ -302,11 +310,6 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set('n', '<leader>g', 'ggVG=')
 
 
--- UNDO KEY WILL NOW SAVE
-keymap.set("n", "u", "u:w<CR>")
-
--- REDO KEY WILL NOW SAVE
-keymap.set('n', '<C-r>', '<C-r>:w<CR>')
 
 -- BUFFERS 
 -- remap PgUp and PgDn keys (Popos system)

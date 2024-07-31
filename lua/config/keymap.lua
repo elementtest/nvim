@@ -248,7 +248,7 @@ keymap.set('i', '<C-s>', '<Esc>:w<CR>a')
 
 
 -- NODE execute in neovim
-keymap.set('n', '<leader>n', '<Cmd>!node %<CR>')
+keymap.set('n', '<leader>n', '<Cmd>w<CR><Cmd>!node %<CR>')
 
 
 

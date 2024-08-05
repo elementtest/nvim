@@ -301,11 +301,8 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- move lines down (Cap K)
 
--- FORMAT ENTIRE DOCUMENT
--- Select entire document and format indents with = 
--- keymap.set('n', '<leader>g', 'ggVG=<C-o>')
-keymap.set('n', '<leader>g', 'ggVG=')
-
+-- FORMAT FORMATTING entire document and return to previous cursor position
+keymap.set("n", "<leader>g", "maggVG=`a")
 
 
 -- BUFFERS 
@@ -330,18 +327,18 @@ keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')
 -- basic layout of combining a keymap to a function
 -- vim.keymap.set("<mode>", '<key>',
 -- function()
--- do something
--- end)
+    -- do something
+    -- end)
 
--- remove annoying asterisks generated in .css and .js files
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "*",
-    command = "setlocal formatoptions-=ro"
-})
+    -- remove annoying asterisks generated in .css and .js files
+    vim.api.nvim_create_autocmd("FileType", {
+        pattern = "*",
+        command = "setlocal formatoptions-=ro"
+    })
 
--- Highlight yanked text for 150ms
-vim.api.nvim_create_autocmd('TextYankPost', {
-    callback = function()
-        vim.highlight.on_yank()
-    end
-})
+    -- Highlight yanked text for 150ms
+    vim.api.nvim_create_autocmd('TextYankPost', {
+        callback = function()
+            vim.highlight.on_yank()
+        end
+    })

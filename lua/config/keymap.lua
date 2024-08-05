@@ -190,6 +190,8 @@ keymap.set("n", "x", '"_x')
 -- when you delete or change a word it will include the -
 opt.iskeyword:append("-")
 
+-- DELETE AND UNDO SAVE OPTIONS
+
 -- delete in visual mode saves file
 keymap.set("v", "d", 'd:w<CR>')
 
@@ -246,7 +248,7 @@ keymap.set('i', '<C-s>', '<Esc>:w<CR>a')
 
 
 -- NODE execute in neovim
-keymap.set('n', '<leader>n', '<Cmd>!node %<CR>')
+keymap.set('n', '<leader>n', '<Cmd>w<CR><Cmd>!node %<CR>')
 
 
 

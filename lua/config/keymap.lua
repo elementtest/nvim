@@ -206,7 +206,7 @@ keymap.set('n', '<C-r>', '<C-r>:w<CR>')
 
 -- JUMP TO FIRST NON-WHITE space character nonwhite space
 -- GO TO ZEEEE FIRST NON WHITE SPACE CHARACTER
-keymap.set('n', 'z', '^')
+keymap.set('n', 'z', '0^')
 
 
 

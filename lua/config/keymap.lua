@@ -198,6 +198,9 @@ keymap.set("v", "d", 'd:w<CR>')
 -- hitting delete saves file
 keymap.set('n', 'dd', 'dd<Cmd>:w<CR>')
 
+-- hitting f5 saves files 
+keymap.set('n', '<F5>', ':w<CR>')
+
 -- UNDO KEY WILL NOW SAVE
 keymap.set("n", "u", "u:w<CR>")
 

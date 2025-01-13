@@ -201,6 +201,9 @@ keymap.set('n', 'dd', 'dd<Cmd>:w<CR>')
 -- hitting f5 saves files 
 keymap.set('n', '<F5>', ':w<CR>')
 
+-- f5 saves in insert mode
+keymap.set('n', '<F5>', ':w<CR>')
+
 -- UNDO KEY WILL NOW SAVE
 keymap.set("n", "u", "u:w<CR>")
 

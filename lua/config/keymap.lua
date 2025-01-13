@@ -202,7 +202,7 @@ keymap.set('n', 'dd', 'dd<Cmd>:w<CR>')
 keymap.set('n', '<F5>', ':w<CR>')
 
 -- f5 saves in insert mode
-keymap.set('i', '<F5>', ':w<CR>')
+keymap.set('i', '<F5>', '<Esc>:w<CR>')
 
 -- UNDO KEY WILL NOW SAVE
 keymap.set("n", "u", "u:w<CR>")

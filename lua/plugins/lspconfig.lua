@@ -42,7 +42,7 @@ return     {
                     },
                 },
             })
-            lspconfig.tsserver.setup ({
+           lspconfig.ts_ls.setup ({
               on_attach = custom_attach,
               capabilities = capabilities,
               filetypes = {

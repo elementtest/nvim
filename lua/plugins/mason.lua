@@ -1,5 +1,5 @@
 --MASON:  package manager install manager LSP servers/linters/formatters
- return     {
+return {
          'williamboman/mason.nvim',
          lazy = false,
          config = function()
@@ -15,4 +15,3 @@
          end
 
  }
-

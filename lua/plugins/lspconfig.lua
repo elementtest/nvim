@@ -1,4 +1,4 @@
-return     {
+return {
         'neovim/nvim-lspconfig',
         lazy = false,
         config = function()
@@ -19,50 +19,50 @@ return     {
             -- █░░ █░█ ▄▀█
             -- █▄▄ █▄█ █▀█
             --0=============================================================================================0
-            lspconfig.lua_ls.setup ({
-                on_attach = custom_attach,
-                -- function that runs AFTER LSP loads in buffer
-                capabilities = capabilities,
-                settings = {
-                    Lua = {
-                        runtime = {
-                            version = 'LuaJIT',
-                        },
-                        diagnostics = {
-                            enable = true,
-                            -- enable = false,
-                        },
-                        workspace = {
-                            checkThirdParty = false,
-                            library = {
-                              vim.env.VIMRUNTIME,
-                            },
-                        },
-                        telemetry = { enable = false },
-                    },
-                },
-            })
-           lspconfig.ts_ls.setup ({
-              on_attach = custom_attach,
-              capabilities = capabilities,
-              filetypes = {
-                "typescript",
-                "typescriptreact",
-                "javascript",
-                "javascriptreact",
-              }
-            })
-            lspconfig.emmet_language_server.setup({
-                filetypes = {"css", "html", "javascript"},
-                on_attach = custom_attach,
-                root_dir = vim.loop.cwd,
-                capabilities = capabilities
-            })
-            lspconfig.cssls.setup({
-                filetypes = {"css"},
-                on_attach = custom_attach,
-                capabilities = capabilities
-            })
+           --  lspconfig.lua_ls.setup ({
+           --      on_attach = custom_attach,
+           --      -- function that runs AFTER LSP loads in buffer
+           --      capabilities = capabilities,
+           --      settings = {
+           --          Lua = {
+           --              runtime = {
+           --                  version = 'LuaJIT',
+           --              },
+           --              diagnostics = {
+           --                  enable = true,
+           --                  -- enable = false,
+           --              },
+           --              workspace = {
+           --                  checkThirdParty = false,
+           --                  library = {
+           --                    vim.env.VIMRUNTIME,
+           --                  },
+           --              },
+           --              telemetry = { enable = false },
+           --          },
+           --      },
+           -- })
+           -- lspconfig.ts_ls.setup ({
+           --    on_attach = custom_attach,
+           --    capabilities = capabilities,
+           --    filetypes = {
+           --      "typescript",
+           --      "typescriptreact",
+           --      "javascript",
+           --      "javascriptreact",
+           --    }
+           --  })
+            -- lspconfig.emmet_language_server.setup({
+            --     filetypes = {"css", "html", "javascript"},
+            --     on_attach = custom_attach,
+            --     root_dir = vim.loop.cwd,
+            --     capabilities = capabilities
+            -- })
+            -- lspconfig.cssls.setup({
+            --     filetypes = {"css"},
+            --     on_attach = custom_attach,
+            --     capabilities = capabilities
+            -- })
 
             -- new server goes here:
             -- lspconfig.SERVER.setup({

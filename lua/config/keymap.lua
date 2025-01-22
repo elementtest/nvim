@@ -54,8 +54,12 @@ local opt = vim.opt
 --see ~/.config/nvim/lua/plugins/treesitter.lua
 --press <C-x> control x 
 
--- LSP (popup code suggestion) (configured in cmp.lua file)
+-- LSP 
+-- (popup code suggestion) (configured in cmp.lua file)
 -- enter key will complete the suggeestion
+-- MASON NOTE (MASON REMOVED AS OF 1/22/2025)
+-- emmet ls server installed successfully 
+-- to do:  javascript and css
 
 -- LIVE SERVER 
 -- open up folder with vim . 

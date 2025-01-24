@@ -52,12 +52,33 @@ return {
            --      "javascriptreact",
            --    }
            --  })
-            lspconfig.emmet_ls.setup({
+            lspconfig.emmet_language_server.setup({
                 filetypes = {"css", "html", "javascript"},
                 on_attach = custom_attach,
                 root_dir = vim.loop.cwd,
-                capabilities = capabilities
+                capabilities = capabilities,
+                  init_options = {
+                    ---@type table<string, string>
+                    includeLanguages = {},
+                    --- @type string[]
+                    excludeLanguages = {},
+                    --- @type string[]
+                    extensionsPath = {},
+                    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/preferences/)
+                    preferences = {},
+                    --- @type boolean Defaults to `true`
+                    showAbbreviationSuggestions = true,
+                    --- @type "always" | "never" Defaults to `"always"`
+                    showExpandedAbbreviation = "always",
+                    --- @type boolean Defaults to `false`
+                    showSuggestionsAsSnippets = false,
+                    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/syntax-profiles/)
+                    syntaxProfiles = {},
+                    --- @type table<string, string> [Emmet Docs](https://docs.emmet.io/customization/snippets/#variables)
+                    variables = {},
+                  },
             })
+
             -- lspconfig.cssls.setup({
             --     filetypes = {"css"},
             --     on_attach = custom_attach,

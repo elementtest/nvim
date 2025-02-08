@@ -314,6 +314,7 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- move lines down (Cap K)
 
 -- FORMAT FORMATTING entire document and return to previous cursor position
+-- UPDATE:  conform.nvim in plugin folder:: use <leader>f to use prettier to format!
 keymap.set("n", "<leader>g", "maggVG=`a")
 
 

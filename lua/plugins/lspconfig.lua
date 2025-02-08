@@ -42,48 +42,27 @@ return {
            --          },
            --      },
            -- })
-           -- lspconfig.ts_ls.setup ({
-           --    on_attach = custom_attach,
-           --    capabilities = capabilities,
-           --    filetypes = {
-           --      "typescript",
-           --      "typescriptreact",
-           --      "javascript",
-           --      "javascriptreact",
-           --    }
-           --  })
+           lspconfig.ts_ls.setup ({
+              on_attach = custom_attach,
+              capabilities = capabilities,
+              filetypes = {
+                "typescript",
+                "typescriptreact",
+                "javascript",
+                "javascriptreact",
+              }
+            })
             lspconfig.emmet_language_server.setup({
-                filetypes = {"css", "html", "javascript"},
+                filetypes = {"css", "html"},
                 on_attach = custom_attach,
                 root_dir = vim.loop.cwd,
-                capabilities = capabilities,
-                  init_options = {
-                    ---@type table<string, string>
-                    includeLanguages = {},
-                    --- @type string[]
-                    excludeLanguages = {},
-                    --- @type string[]
-                    extensionsPath = {},
-                    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/preferences/)
-                    preferences = {},
-                    --- @type boolean Defaults to `true`
-                    showAbbreviationSuggestions = true,
-                    --- @type "always" | "never" Defaults to `"always"`
-                    showExpandedAbbreviation = "always",
-                    --- @type boolean Defaults to `false`
-                    showSuggestionsAsSnippets = false,
-                    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/syntax-profiles/)
-                    syntaxProfiles = {},
-                    --- @type table<string, string> [Emmet Docs](https://docs.emmet.io/customization/snippets/#variables)
-                    variables = {},
-                  },
+                capabilities = capabilities
             })
-
-            -- lspconfig.cssls.setup({
-            --     filetypes = {"css"},
-            --     on_attach = custom_attach,
-            --     capabilities = capabilities
-            -- })
+            lspconfig.cssls.setup({
+                filetypes = {"css"},
+                on_attach = custom_attach,
+                capabilities = capabilities
+            })
 
             -- new server goes here:
             -- lspconfig.SERVER.setup({

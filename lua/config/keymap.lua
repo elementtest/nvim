@@ -10,7 +10,6 @@ local opt = vim.opt
 -- silent ??? wont get any feedback in the terminal
 
 
-
 -- <<<<NOTES OTHER PLUGINS ETC>>>> --
 --COMMENTS (built in neovim)
 --to add a comment type gcc 
@@ -54,12 +53,16 @@ local opt = vim.opt
 --see ~/.config/nvim/lua/plugins/treesitter.lua
 --press <C-x> control x 
 
--- LSP 
+-- LSP (Language Server Protocol)
 -- (popup code suggestion) (configured in cmp.lua file)
 -- enter key will complete the suggeestion
 -- MASON NOTE (MASON REMOVED AS OF 1/22/2025)
--- emmet ls server installed successfully 
--- to do:  javascript and css
+-- use npm to install language servers instead
+-- HELP COMMAND :help lspconfig-all
+-- search for the language server in the list (n to go to next match)
+-- (check if LSP is installed) command: 
+-- echo executable('lua-language-server') (will return a 1 if it is installed, 0 if not)
+-- if neovim cant find it then it cant run it
 
 -- LIVE SERVER 
 -- open up folder with vim . 

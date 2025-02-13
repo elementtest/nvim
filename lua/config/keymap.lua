@@ -76,6 +76,10 @@ local opt = vim.opt
 -- can also Delet Surround i.e. ds( ds" etc 
 -- :h nvim-surround.usage for help
 
+-- FORMAT (using prettier)
+-- <leader> f will format the entire document
+-- see conform-prettier.lua plugin
+
 --<<<<KEYMAPS>>>>--
 
 -- Behaviour

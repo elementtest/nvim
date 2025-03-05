@@ -65,6 +65,7 @@ local opt = vim.opt
 -- if neovim cant find it then it cant run it
 -- display all NPM packages installed
 -- npm list -g --depth=0
+-- lua currently not configured
 
 -- LIVE SERVER 
 -- open up folder with vim . 

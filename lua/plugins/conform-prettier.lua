@@ -34,7 +34,7 @@ return {
     formatters_by_ft = {
       lua = { 'stylua' },
       html = { 'prettier' },  -- Prettier for HTML files (using prettierd)
-      css = { 'prettier' },   -- Prettier for CSS files (using prettierd)
+      css = { 'prettier --tab-width 4' },   -- Prettier for CSS files (using prettierd)
       javascript = { 'prettier' },  -- Prettier for JavaScript files (using prettierd)
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },

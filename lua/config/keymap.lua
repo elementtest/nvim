@@ -63,6 +63,8 @@ local opt = vim.opt
 -- (check if LSP is installed) command: 
 -- echo executable('lua-language-server') (will return a 1 if it is installed, 0 if not)
 -- if neovim cant find it then it cant run it
+-- display all NPM packages installed
+-- npm list -g --depth=0
 
 -- LIVE SERVER 
 -- open up folder with vim . 

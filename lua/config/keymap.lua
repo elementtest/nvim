@@ -154,11 +154,11 @@ vim.opt.showmatch = true
 -- softtabstop : number of spaces in insert mode for a tab hit
 -- smartindent : adjust indent of new line based on previous one
 -- CHANGING ALL 2 NUMBERS TO 4 TO REVERSE CHANGE BACK TO 2
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.o.autoindent = true
-vim.o.softtabstop = 4
+vim.o.softtabstop = 2
 vim.o.smartindent = true
 
 

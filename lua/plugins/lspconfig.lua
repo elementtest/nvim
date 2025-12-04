@@ -43,7 +43,7 @@ return {
                 },
             })
             lspconfig.tsserver.setup ({
-            --0=============================================================================================0
+            --=============================================================================================0
            --  lspconfig.lua_ls.setup ({
            --      on_attach = custom_attach,
            --      -- function that runs AFTER LSP loads in buffer

@@ -25,7 +25,7 @@ return {
         luasnip.config.setup({})
         luasnip.add_snippets('css', {
             luasnip.snippet('brd', {
-                luasnip.text_node('border: solid red 5px;')
+                luasnip.text_node('border: solid #fc03e3 5px;')
             })
         })
 

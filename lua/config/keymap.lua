@@ -10,7 +10,6 @@ local opt = vim.opt
 -- silent ??? wont get any feedback in the terminal
 
 
-
 -- <<<<NOTES OTHER PLUGINS ETC>>>> --
 --COMMENTS (built in neovim)
 --to add a comment type gcc 
@@ -54,8 +53,19 @@ local opt = vim.opt
 --see ~/.config/nvim/lua/plugins/treesitter.lua
 --press <C-x> control x 
 
--- LSP (popup code suggestion) (configured in cmp.lua file)
+-- LSP (Language Server Protocol)
+-- (popup code suggestion) (configured in cmp.lua file)
 -- enter key will complete the suggeestion
+-- MASON NOTE (MASON REMOVED AS OF 1/22/2025)
+-- use npm to install language servers instead
+-- HELP COMMAND :help lspconfig-all
+-- search for the language server in the list (n to go to next match)
+-- (check if LSP is installed) command: 
+-- echo executable('lua-language-server') (will return a 1 if it is installed, 0 if not)
+-- if neovim cant find it then it cant run it
+-- display all NPM packages installed
+-- npm list -g --depth=0
+-- lua currently not configured
 
 -- LIVE SERVER 
 -- open up folder with vim . 
@@ -68,6 +78,10 @@ local opt = vim.opt
 -- begins with You Surround i.e. ysiw ysa" ysl* yst]' etc 
 -- can also Delet Surround i.e. ds( ds" etc 
 -- :h nvim-surround.usage for help
+
+-- FORMAT (using prettier)
+-- <leader> f will format the entire document
+-- see conform-prettier.lua plugin
 
 --<<<<KEYMAPS>>>>--
 
@@ -139,12 +153,12 @@ vim.opt.showmatch = true
 -- autoindent : adjusts new line based on indent of previous line
 -- softtabstop : number of spaces in insert mode for a tab hit
 -- smartindent : adjust indent of new line based on previous one
--- CHANGING ALL 2 NUMBERS TO 4 TO REVERSE CHANGE BACK TO 2
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
+-- Change tab amount (all numbers) from 4 to 2
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.o.autoindent = true
-vim.o.softtabstop = 4
+vim.o.softtabstop = 2
 vim.o.smartindent = true
 
 
@@ -310,6 +324,7 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- move lines down (Cap K)
 
 -- FORMAT FORMATTING entire document and return to previous cursor position
+-- UPDATE:  conform.nvim in plugin folder:: use <leader>f to use prettier to format!
 keymap.set("n", "<leader>g", "maggVG=`a")
 
 

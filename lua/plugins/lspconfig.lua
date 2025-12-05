@@ -42,7 +42,6 @@ return {
                     },
                 },
             })
-            lspconfig.tsserver.setup ({
             --=============================================================================================0
            --  lspconfig.lua_ls.setup ({
            --      on_attach = custom_attach,

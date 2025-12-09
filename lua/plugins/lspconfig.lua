@@ -34,9 +34,16 @@ return {
         Lua = {
           runtime = {
             version = 'LuaJIT',
-          }
-        }
-      }
+          },
+          telemetry = { enable = false },
+          workspace = {
+            checkThirdParth = false,
+            library = {
+              vim.env.VIMRUNTIME,
+            },
+          },
+        },
+      },
     })
 
     -- Now that the language server is configured, it must be enabled

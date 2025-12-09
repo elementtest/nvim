@@ -178,6 +178,16 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.incsearch = true
 
+-- disable PERL
+vim.g.loaded_perl_provider = 0
+
+-- disable PYTHON
+vim.g.loaded_python3_provider = 0
+
+-- disable RUBY
+vim.g.loaded_ruby_provider = 0
+
+
 -- MOUSE
 -- only active in "v" visual mode
 vim.o.mouse = "v"
@@ -293,9 +303,9 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>",
 { noremap = true, silent = true})
 
 --Indent>
---indents in normal mode 
-keymap.set("n", "<", "<")
-keymap.set("n", ">", ">")
+-- Indent in Visual Mode
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
 
 --move selected lines up or down with alt key
 keymap.set('n', '<A-k>', ':m .-2<cr>==')

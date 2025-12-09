@@ -2,5 +2,5 @@
 -- all files will be installed / updated nvim plugins
 return {
 	{"folke/neoconf.nvim", cmd = "Neoconf" },
-	"folke/neodev.nvim",
+	"folke/lazydev.nvim",
 }

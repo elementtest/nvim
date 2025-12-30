@@ -253,21 +253,21 @@ keymap.set("n", "<S-right>", "<C-d>zz")
 
 
 -- SPLIT WINDOWS
-keymap.set("n", "<leader>sv", "<C-w>v") --split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s") --split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=") --make windows equal width
-keymap.set("n", "<leader>sc", ":close<CR>") --close split window
-keymap.set("n", "<leader>0", "<C-w>l") --  >> move to right 
-keymap.set("n", "<leader>9", "<C-w>h") --  >> move to left window
-keymap.set("n", "<leader>j", "<C-w>j") --  >> move down a window
-keymap.set("n", "<leader>k", "<C-w>k") --  >> move up a window
-keymap.set('n', '<C-Left>', '<Cmd>vertical resize -2<CR>')
-keymap.set('n', '<C-Right>', '<Cmd>vertical resize +2<CR>')
+-- keymap.set("n", "<leader>sv", "<C-w>v") --split window vertically
+-- keymap.set("n", "<leader>sh", "<C-w>s") --split window horizontally
+-- keymap.set("n", "<leader>se", "<C-w>=") --make windows equal width
+-- keymap.set("n", "<leader>sc", ":close<CR>") --close split window
+-- keymap.set("n", "<leader>0", "<C-w>l") --  >> move to right 
+-- keymap.set("n", "<leader>9", "<C-w>h") --  >> move to left window
+-- keymap.set("n", "<leader>j", "<C-w>j") --  >> move down a window
+-- keymap.set("n", "<leader>k", "<C-w>k") --  >> move up a window
+-- keymap.set('n', '<C-Left>', '<Cmd>vertical resize -2<CR>')
+-- keymap.set('n', '<C-Right>', '<Cmd>vertical resize +2<CR>')
 
 
 -- first part is un-highlighting search results
 -- second part is moves cursor to next window (if multiple open windows)
-keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-W>w")
+keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-W>w", {desc = "..."})
 
 -- ADD LINE / INSERT LINE WITHOUT GOING INTO INSERT MODE
 keymap.set("n", "<leader>o", "o<Esc>0")

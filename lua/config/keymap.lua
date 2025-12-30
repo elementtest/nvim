@@ -345,7 +345,7 @@ keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
 keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
 
 -- Stop and Restart Live Server with Delay in between
-keymap.set('n', '<leader>h', [[<Cmd>LiveServerStop<CR>:sleep 500m<CR>:LiveServerStart<CR>]])
+keymap.set('n', '<leader>h', [[<Cmd>LiveServerStop<CR>:sleep 500m<CR>:LiveServerStart<CR>]], {desc = "Live Webpage"})
 
 
 -- PREVIOUS shortcut configuration (try above first for a while before deleting)

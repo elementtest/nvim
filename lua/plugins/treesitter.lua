@@ -2,10 +2,7 @@ return     {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
         -- TS MEANS TREE SITTER
-        config = function()
-            -- ENABLES THIS IF USING WINDOWS:
-            -- require('nvim-treesitter.install').compilers = { 'zig' } 
-            require('nvim-treesitter.configs').setup {
+        opts = {
                 ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query' },
                 -- Install parsers synchronously (only applied to `ensure_installed`)
                 sync_install = false,
@@ -17,7 +14,7 @@ return     {
 
                incremental_selection = {
                     enable = true,
-                    keymayps = {
+                    keymaps = {
                         init_selection = "gnn",
                         node_incremental = "grn",
                         scope_incremental = "grc",
@@ -26,5 +23,4 @@ return     {
                 },
 
             }
-        end
     }

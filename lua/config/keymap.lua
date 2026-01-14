@@ -297,10 +297,6 @@ keymap.set('n', '<C-s>', '<Esc>:w<CR>')
 -- i.e. jump cursor out of [] when stuck inside
 keymap.set('i', 'z<leader>', '<right>')
 
--- NVIM TREE
--- opens file explorer on left
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>",
-{ noremap = true, silent = true})
 
 --Indent>
 -- Indent in Visual Mode

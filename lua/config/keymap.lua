@@ -83,6 +83,9 @@ local opt = vim.opt
 -- <leader> f will format the entire document
 -- see conform-prettier.lua plugin
 
+-- FILE MANAGER 
+-- use mini.files plugn //leader e to open (vim like behaviour)
+
 --<<<<KEYMAPS>>>>--
 
 -- Behaviour

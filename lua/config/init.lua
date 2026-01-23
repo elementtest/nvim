@@ -40,8 +40,10 @@ local opts = {
 			"zipPlugin",
 		},
 	},
+-- DO NOT NOTIFY ME WHEN I AM WRITING A PLUGIN.LUA file
 	change_detection = {
-		notify = true,
+    enabled = false,
+		notify = false,
 	},
 }
 require("lazy").setup(plugins, opts)

@@ -374,3 +374,39 @@ keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')
             vim.highlight.on_yank()
         end
     })
+
+    -- TEST
+    -- Global state
+vim.g.no_ai_mode = false
+
+local function toggle_no_ai_mode()
+  vim.g.no_ai_mode = not vim.g.no_ai_mode
+
+  if vim.g.no_ai_mode then
+    -- Disable indentation
+    vim.opt.autoindent = false
+    vim.opt.smartindent = false
+    vim.opt.cindent = false
+    vim.opt.indentexpr = ""
+    vim.opt.formatexpr = ""
+
+    -- Disable completion
+    vim.opt.omnifunc = ""
+
+    -- Stop all LSP clients
+    for _, client in pairs(vim.lsp.get_active_clients()) do
+      client.stop()
+    end
+
+    vim.notify("NOTE TAKING MODE ON(see toggle_no_ai_mode in keymap.lua)")
+  else
+    -- Re-enable indentation
+    vim.opt.autoindent = true
+    vim.opt.smartindent = true
+
+    vim.notify("NEOVIM MODE ON")
+  end
+end
+
+vim.keymap.set("n", "<leader>(", toggle_no_ai_mode, { desc = "Toggle no-indent / no-LSP mode" })
+

@@ -169,7 +169,7 @@ opt.cursorline = true
 
 -- line wrapping 
 --code that extends beyond edge of view will be wrapped to next line
-vim.o.wrap = false
+vim.o.wrap = true
 vim.o.linebreak = true
 
 -- search settings

@@ -119,7 +119,8 @@ vim.o.title = true
 
 -- Appearance
 -- termguicolors == required by many plugins / terminal color support
--- colorcolumn visually draws arbitrary line (see right) >>>>
+-- colorcolumn visually draws arbitrary line (see right) >>>> (you're set at 100 chars)
+-- why?  many teams will have a recommended maximum line length eg 80/100 chars
 -- signcolumn displays errors warnings hints to furthmost LEFT HAND SIDE
 -- !scrolloff # is minimum amount of lines to keep above/below cursor
 -- completeopt:

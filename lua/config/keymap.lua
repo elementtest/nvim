@@ -97,8 +97,6 @@ vim.o.errorbells = false
 -- no noise when you make an error
 vim.o.swapfile = false
 vim.o.backup = false
-vim.o.undodir = vim.fn.expand("~/.vim/undodir")
---history of undo changes under this dir ^^
 vim.o.backspace = "indent,eol,start"
 -- indent >> backspace key will remove auto indent feature
 --  if you're indented on new line and press backspace, it will 

@@ -126,7 +126,7 @@ vim.o.title = true
 -- menuone display popup menu even if only one match
 -- noinsert do not automatically insert the first match
 -- !noselect do not automatically select first match 
-vim.o.termguicolors = true 
+vim.o.termguicolors = true
 vim.o.colorcolumn = '100'
 vim.o.signcolumn = "yes"
 vim.o.scrolloff = 999
@@ -145,7 +145,6 @@ vim.o.number = true
 vim.opt.list = true
 vim.opt.listchars = { tab = "  ", leadmultispace = '│   ' }
 vim.opt.showmatch = true
-
 
 
 
@@ -216,6 +215,9 @@ keymap.set("n", "x", '"_x')
 
 -- when you delete or change a word it will include the -
 opt.iskeyword:append("-")
+
+-- DIAGNOSTICS
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show Diagnostic"})
 
 -- DELETE AND UNDO SAVE OPTIONS
 

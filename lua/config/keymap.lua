@@ -170,7 +170,7 @@ opt.cursorline = true
 
 -- line wrapping 
 --code that extends beyond edge of view will be wrapped to next line
-vim.o.wrap = true
+vim.o.wrap = false
 vim.o.linebreak = true
 
 -- search settings
@@ -375,8 +375,7 @@ keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')
         end
     })
 
-    -- TEST
-    -- Global state
+-- ENABLE TEXT FRIENDLY MODE OF DOING NEOVIM
 vim.g.no_ai_mode = false
 
 local function toggle_no_ai_mode()
@@ -384,6 +383,7 @@ local function toggle_no_ai_mode()
 
   if vim.g.no_ai_mode then
     -- Disable indentation
+    vim.opt_local.wrap = true
     vim.opt.autoindent = false
     vim.opt.smartindent = false
     vim.opt.cindent = false

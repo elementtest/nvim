@@ -218,6 +218,9 @@ opt.iskeyword:append("-")
 -- DIAGNOSTICS
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show Diagnostic"})
 
+-- YANK / COPY ENTIRE FILE
+vim.keymap.set("n", "<leader>Y", ":%y+<CR>", { desc = "Yank entire buffer to clipboard" })
+
 -- DELETE AND UNDO SAVE OPTIONS
 
 -- delete in visual mode saves file

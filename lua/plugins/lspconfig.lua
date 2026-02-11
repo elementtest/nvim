@@ -1,12 +1,17 @@
 return {
   'neovim/nvim-lspconfig',
+  dependencies = {
+    'saghen/blink.cmp',
+  },
   lazy = false,
   config = function()
+    local capabilities = require('blink.cmp').get_lsp_capabilities()
+    -- require("lspconfig").lua_ls.setup {capabilities = capabilities}
     local lspconfig = require('lspconfig')
     -- two vars below create then enhance capabilities
     -- they are the same variable
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+    -- local capabilities = vim.lsp.protocol.make_client_capabilities()
+    -- capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
     local custom_attach = function(client, bufnr)
       --display NVIM version with LSP
       local version_output = vim.fn.system('nvim --version')

@@ -54,10 +54,11 @@ local opt = vim.opt
 --press <C-x> control x 
 
 -- LSP (Language Server Protocol)
--- (popup code suggestion) (configured in cmp.lua file)
--- enter key will complete the suggeestion
--- MASON NOTE (MASON REMOVED AS OF 1/22/2025)
--- use npm to install language servers instead
+-- (popup code suggestion) (configured in blink-cmp.lua file)
+-- C-n go to next suggestion :: C-p previous :: C-y choose suggestion ::C-Space open menu or docs
+-- C-k Toggle signature help :: C-e hide menu
+-- K open documentation (i.e. press on addeventlistener)
+-- Can use MASON or NPM to install language servers!
 -- HELP COMMAND :help lspconfig-all
 -- search for the language server in the list (n to go to next match)
 -- (check if LSP is installed) command: 
@@ -65,7 +66,6 @@ local opt = vim.opt
 -- if neovim cant find it then it cant run it
 -- display all NPM packages installed
 -- npm list -g --depth=0
--- lua currently not configured
 
 -- LIVE SERVER 
 -- open up folder with vim . 

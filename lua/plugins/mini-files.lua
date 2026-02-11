@@ -108,5 +108,5 @@ return {
 --         Snacks.rename.on_rename_file(event.data.from, event.data.to)
 --       end,
 --     })
---   end,
--- }
+  end,
+}

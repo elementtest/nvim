@@ -85,6 +85,8 @@ local opt = vim.opt
 
 -- FILE MANAGER 
 -- use mini.files plugn //leader e to open (vim like behaviour)
+-- WHILE INSIDE press gc to set a new CWD location in the file tree!
+-- if you hit <leader>fm you will now go to that location!  
 
 --<<<<KEYMAPS>>>>--
 

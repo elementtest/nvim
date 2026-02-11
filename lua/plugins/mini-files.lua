@@ -101,11 +101,12 @@ return {
       end,
     })
 
-    vim.api.nvim_create_autocmd("User", {
-      pattern = "MiniFilesActionRename",
-      callback = function(event)
-        Snacks.rename.on_rename_file(event.data.from, event.data.to)
-      end,
-    })
-  end,
-}
+    -- CODE BELOW: used in renaming files and not having things break (not needed now)
+--     vim.api.nvim_create_autocmd("User", {
+--       pattern = "MiniFilesActionRename",
+--       callback = function(event)
+--         Snacks.rename.on_rename_file(event.data.from, event.data.to)
+--       end,
+--     })
+--   end,
+-- }

@@ -21,7 +21,7 @@ return {
       desc = "Open mini.files (Directory of Current File)",
     },
     {
-      "<leader>fM",
+      "<leader>fm",
       function()
         require("mini.files").open(vim.uv.cwd(), true)
       end,
@@ -45,27 +45,6 @@ return {
       require("mini.files").refresh({ content = { filter = new_filter } })
     end
 
-    local map_split = function(buf_id, lhs, direction, close_on_file)
-      local rhs = function()
-        local new_target_window
-        local cur_target_window = require("mini.files").get_explorer_state().target_window
-        if cur_target_window ~= nil then
-          vim.api.nvim_win_call(cur_target_window, function()
-            vim.cmd("belowright " .. direction .. " split")
-            new_target_window = vim.api.nvim_get_current_win()
-          end)
-
-          require("mini.files").set_target_window(new_target_window)
-          require("mini.files").go_in({ close_on_file = close_on_file })
-        end
-      end
-
-      local desc = "Open in " .. direction .. " split"
-      if close_on_file then
-        desc = desc .. " and close"
-      end
-      vim.keymap.set("n", lhs, rhs, { buffer = buf_id, desc = desc })
-    end
 
     local files_set_cwd = function()
       local cur_entry_path = MiniFiles.get_fs_entry().path
@@ -94,19 +73,8 @@ return {
           { buffer = args.data.buf_id, desc = "Set cwd" }
         )
 
-        map_split(buf_id, opts.mappings and opts.mappings.go_in_horizontal or "<C-w>s", "horizontal", false)
-        map_split(buf_id, opts.mappings and opts.mappings.go_in_vertical or "<C-w>v", "vertical", false)
-        map_split(buf_id, opts.mappings and opts.mappings.go_in_horizontal_plus or "<C-w>S", "horizontal", true)
-        map_split(buf_id, opts.mappings and opts.mappings.go_in_vertical_plus or "<C-w>V", "vertical", true)
       end,
     })
 
-    -- CODE BELOW: used in renaming files and not having things break (not needed now)
---     vim.api.nvim_create_autocmd("User", {
---       pattern = "MiniFilesActionRename",
---       callback = function(event)
---         Snacks.rename.on_rename_file(event.data.from, event.data.to)
---       end,
---     })
   end,
 }

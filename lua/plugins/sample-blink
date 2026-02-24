@@ -1,0 +1,61 @@
+-- following is a sample config for blink
+return {
+  'saghen/blink.cmp',
+  dependencies = { 'rafamadriz/friendly-snippets' },
+  version = '1.*',
+
+  opts = {
+    -- 1. High-end Visuals
+    appearance = {
+      nerd_font_variant = 'mono',
+      -- Blink can use the same colors as your Neovim theme
+      use_nvim_cmp_as_default = true,
+    },
+
+    -- 2. Enhanced Completion Behavior
+    completion = {
+      -- Show the "grayed out" suggestion in the line as you type
+      ghost_text = { enabled = true },
+
+      -- Main Menu UI
+      menu = {
+        border = 'rounded',
+        winblend = 0,
+        draw = {
+          columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } },
+        }
+      },
+
+      -- Documentation (The "Live Hover")
+      documentation = {
+        auto_show = true,          -- Turn this on!
+        auto_show_delay_ms = 250,  -- Slight delay to prevent flickering
+        window = {
+          border = 'rounded',
+          max_width = 60,
+          max_height = 20,
+        },
+      },
+    },
+
+    -- 3. Signature Help (Parameter hints)
+    signature = {
+      enabled = true,
+      window = { border = 'rounded' }
+    },
+
+    -- 4. Keymaps (Standard VS Code style)
+    keymap = { 
+      preset = 'default',
+      -- Manually toggle docs if you want to hide/show them
+      ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+    },
+
+    sources = {
+      default = { 'lsp', 'path', 'snippets', 'buffer' },
+    },
+
+    fuzzy = { implementation = "prefer_rust_with_warning" }
+  },
+}
+

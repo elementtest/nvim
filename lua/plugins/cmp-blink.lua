@@ -3,6 +3,17 @@ return {
 	dependencies = { "rafamadriz/friendly-snippets" },
 
 	version = "1.*",
+	init = function()
+		vim.api.nvim_create_autocmd("ColorScheme", {
+			callback = function()
+        vim.api.nvim_set_hl(0, "BlinkCmpSignatureHelpActiveParameter", { bg = "#011627", fg = "#00d7af", bold = true })
+
+
+			end,
+		})
+		-- Apply it immediately for the current session
+		vim.api.nvim_exec_autocmds("ColorScheme", {})
+	end,
 
 	opts = {
 		-- type ( to trigger to be a cheat sheet for anything that requires arguments i.e. functions

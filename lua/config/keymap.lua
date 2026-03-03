@@ -218,7 +218,8 @@ keymap.set("n", "x", '"_x')
 opt.iskeyword:append("-")
 
 -- DIAGNOSTICS
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show Diagnostic"})
+vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next(); vim.diagnostic.open_float() end, { desc = "Next Diagnostic + Float" })
+
 
 -- YANK / COPY ENTIRE FILE
 vim.keymap.set("n", "<leader>Y", ":%y+<CR>", { desc = "Yank entire buffer to clipboard" })

@@ -6,13 +6,12 @@ local keymap = vim.keymap
 -- variable make it easier to write out many options
 local opt = vim.opt
 -- <CR> enter key
--- noremap ???? It wont get remapped 
+-- noremap ???? It wont get remapped
 -- silent ??? wont get any feedback in the terminal
-
 
 -- <<<<NOTES OTHER PLUGINS ETC>>>> --
 --COMMENTS (built in neovim)
---to add a comment type gcc 
+--to add a comment type gcc
 
 -- FONT USED
 -- font used is JetBrainsMono Nerd Font Mono
@@ -24,17 +23,17 @@ local opt = vim.opt
 -- then edit it
 
 -- JUMP LIST
--- keeps track of movements in a file 
+-- keeps track of movements in a file
 --CTRL o <<moves back through jump list>>
 --CTRL i <<moves forward through jump list>>
---allows navigation between locations 
+--allows navigation between locations
 
 -- VIM ILLUMINATE PLUGIN
 -- when cursor on a word(not /search) it highlight ALL instance of word
 -- use alt + n or alt + p to move through instances of
 -- search result that is highlighted
 
--- gx-nvim.lua PLUGIN 
+-- gx-nvim.lua PLUGIN
 -- use gx to open links inside the browser
 
 -- YANK COPY PASTE
@@ -42,16 +41,16 @@ local opt = vim.opt
 -- issue <<adds a trailing space>>
 -- VIM HIGHLIGHTED YANK PLUGIN
 -- will highlight text you yank to give visual confirm it succeeded
--- :%y+ will copy the entire file 
+-- :%y+ will copy the entire file
 --vim.keymap.set('v', '<leader><right>', '"+y')
---right now commenting out.  yy works fine for this purpose 
+--right now commenting out.  yy works fine for this purpose
 --!USE BIG Y TO NOT HAVE A TRAILING SPACE COPIED
 
 -- TREESITTER  SHORTCUT
 -- (called incremental selection)
 -- can be used for other keyboard shortcuts (selecting code sections)
 --see ~/.config/nvim/lua/plugins/treesitter.lua
---press <C-x> control x 
+--press <C-x> control x
 
 -- LSP (Language Server Protocol)
 -- (popup code suggestion) (configured in blink-cmp.lua file)
@@ -61,32 +60,31 @@ local opt = vim.opt
 -- Can use MASON or NPM to install language servers!
 -- HELP COMMAND :help lspconfig-all
 -- search for the language server in the list (n to go to next match)
--- (check if LSP is installed) command: 
+-- (check if LSP is installed) command:
 -- echo executable('lua-language-server') (will return a 1 if it is installed, 0 if not)
 -- if neovim cant find it then it cant run it
 -- display all NPM packages installed
 -- npm list -g --depth=0
 
--- LIVE SERVER 
--- open up folder with vim . 
+-- LIVE SERVER
+-- open up folder with vim .
 -- then :LiveServerStart to start it
 -- LiveServerStart or LiveServerStop will do accordingly
 
-
 -- SURROUND NVIM
--- surround text with [] {} '' etc 
--- begins with You Surround i.e. ysiw ysa" ysl* yst]' etc 
--- can also Delet Surround i.e. ds( ds" etc 
+-- surround text with [] {} '' etc
+-- begins with You Surround i.e. ysiw ysa" ysl* yst]' etc
+-- can also Delet Surround i.e. ds( ds" etc
 -- :h nvim-surround.usage for help
 
 -- FORMAT (using prettier)
 -- <leader> f will format the entire document
 -- see conform-prettier.lua plugin
 
--- FILE MANAGER 
+-- FILE MANAGER
 -- use mini.files plugn //leader e to open (vim like behaviour)
 -- WHILE INSIDE press gc to set a new CWD location in the file tree!
--- if you hit <leader>fm you will now go to that location!  
+-- if you hit <leader>fm you will now go to that location!
 
 --<<<<KEYMAPS>>>>--
 
@@ -94,28 +92,25 @@ local opt = vim.opt
 vim.o.hidden = true
 --can change buffers without saving
 vim.o.modifiable = true
--- buffer can be changed or edited.  
+-- buffer can be changed or edited.
 vim.o.errorbells = false
 -- no noise when you make an error
 vim.o.swapfile = false
 vim.o.backup = false
 vim.o.backspace = "indent,eol,start"
 -- indent >> backspace key will remove auto indent feature
---  if you're indented on new line and press backspace, it will 
---  decrease indent level 
---  eol >> allows backspace to move to previous line 
---  if cursor is at the beginning of current line  
+--  if you're indented on new line and press backspace, it will
+--  decrease indent level
+--  eol >> allows backspace to move to previous line
+--  if cursor is at the beginning of current line
 --  start >> move to end of previous line when at beginning of file
 --  im guessing move to a different file ?? when at start of file??
---  clipboard synchronizes system clipboard with the neovim clipboard 
+--  clipboard synchronizes system clipboard with the neovim clipboard
 vim.o.encoding = "UTF-8"
 vim.o.clipboard = "unnamedplus"
 
-
-
 -- display file path and file name at VERY top of terminal
 vim.o.title = true
-
 
 -- Appearance
 -- termguicolors == required by many plugins / terminal color support
@@ -126,30 +121,28 @@ vim.o.title = true
 -- completeopt:
 -- menuone display popup menu even if only one match
 -- noinsert do not automatically insert the first match
--- !noselect do not automatically select first match 
+-- !noselect do not automatically select first match
 vim.o.termguicolors = true
-vim.o.colorcolumn = '100'
+vim.o.colorcolumn = "100"
 vim.o.signcolumn = "yes"
 vim.o.scrolloff = 999
 vim.o.completeopt = "menuone,noinsert,noselect"
 
 -- make relative line numbers
--- current line will only show absolute line number 
+-- current line will only show absolute line number
 -- easier when using j and k motions to find exact line
 vim.o.relativenumber = true
 vim.o.number = true
 
 -- VISUAL LINE INDENTATION MAKING INDENTS EASIER TO SEE
 -- list enables special characters to be displayed
--- listchars will insert a | for every two spaces of indent 
+-- listchars will insert a | for every two spaces of indent
 -- showmatch will highlight matching {[""]} when put over it
 vim.opt.list = true
-vim.opt.listchars = { tab = "  ", leadmultispace = '│   ' }
+vim.opt.listchars = { tab = "  ", leadmultispace = "│   " }
 vim.opt.showmatch = true
 
-
-
--- tabs and indentation 
+-- tabs and indentation
 -- tabstop : every tab hit will insert FOUR spaces
 -- shiftwidth : number of spaces used at each level of indent
 -- expandtab : replace tab chars with spaces from shiftwidth setting
@@ -164,17 +157,16 @@ vim.o.autoindent = true
 vim.o.softtabstop = 2
 vim.o.smartindent = true
 
-
 -- put line under cursor position
 opt.cursorline = true
 
--- line wrapping 
+-- line wrapping
 --code that extends beyond edge of view will be wrapped to next line
 vim.o.wrap = true
 vim.o.linebreak = true
 
 -- search settings
--- if you type lower case will match both 
+-- if you type lower case will match both
 -- but uppercase will match ONLY uppercase
 --inc search :: as youre typing search will begin highlighting
 vim.o.ignorecase = true
@@ -190,12 +182,11 @@ vim.g.loaded_python3_provider = 0
 -- disable RUBY
 vim.g.loaded_ruby_provider = 0
 
-
 -- MOUSE
 -- only active in "v" visual mode
 vim.o.mouse = "v"
 
--- TIMEOUT 
+-- TIMEOUT
 -- ie when hit leader key how long do you have to press next key
 -- see above... how long will it "listen" for the space key after
 -- the 8 or 9 is hit
@@ -215,11 +206,13 @@ vim.o.splitbelow = true
 keymap.set("n", "x", '"_x')
 
 -- when you delete or change a word it will include the -
-opt.iskeyword:append({"-","#","$","@"})
+opt.iskeyword:append({ "-", "#", "$", "@" })
 
 -- DIAGNOSTICS
-vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next(); vim.diagnostic.open_float() end, { desc = "Next Diagnostic + Float" })
-
+vim.keymap.set("n", "]d", function()
+	vim.diagnostic.goto_next()
+	vim.diagnostic.open_float()
+end, { desc = "Next Diagnostic + Float" })
 
 -- YANK / COPY ENTIRE FILE
 vim.keymap.set("n", "<leader>Y", ":%y+<CR>", { desc = "Yank entire buffer to clipboard" })
@@ -227,31 +220,29 @@ vim.keymap.set("n", "<leader>Y", ":%y+<CR>", { desc = "Yank entire buffer to cli
 -- DELETE AND UNDO SAVE OPTIONS
 
 -- delete in visual mode saves file
-keymap.set("v", "d", 'd:w<CR>')
+keymap.set("v", "d", "d:w<CR>")
 
 -- hitting delete saves file
-keymap.set('n', 'dd', 'dd<Cmd>:w<CR>')
+keymap.set("n", "dd", "dd<Cmd>:w<CR>")
 
--- hitting f5 saves files 
-keymap.set('n', '<F5>', ':w<CR>')
+-- hitting f5 saves files
+keymap.set("n", "<F5>", ":w<CR>")
 
 -- f5 saves in insert mode
-keymap.set('i', '<F5>', '<Esc>:w<CR>')
+keymap.set("i", "<F5>", "<Esc>:w<CR>")
 
 -- UNDO KEY WILL NOW SAVE
 keymap.set("n", "u", "u:w<CR>")
 
 -- REDO KEY WILL NOW SAVE
-keymap.set('n', '<C-r>', '<C-r>:w<CR>')
+keymap.set("n", "<C-r>", "<C-r>:w<CR>")
 
 -- JUMP TO FIRST NON-WHITE space character nonwhite space
 -- GO TO ZEEEE FIRST NON WHITE SPACE CHARACTER
-keymap.set('n', 'H', '^', {desc = "Go to First Char"})
-keymap.set('n', 'L', '$', {desc = "Go to Last Char"})
+keymap.set("n", "H", "^", { desc = "Go to First Char" })
+keymap.set("n", "L", "$", { desc = "Go to Last Char" })
 
-
-
--- REMAP arrow keys to scrolling keys 
+-- REMAP arrow keys to scrolling keys
 -- left and right are big scrolls
 -- up and down are small scrolls
 -- using shift key with arrows goes down half a page
@@ -262,52 +253,44 @@ keymap.set("n", "<left>", "<C-b>zz")
 keymap.set("n", "<S-left>", "<C-u>zz")
 keymap.set("n", "<S-right>", "<C-d>zz")
 
-
 -- SPLIT WINDOWS
 -- keymap.set("n", "<leader>sv", "<C-w>v") --split window vertically
 -- keymap.set("n", "<leader>sh", "<C-w>s") --split window horizontally
 -- keymap.set("n", "<leader>se", "<C-w>=") --make windows equal width
 -- keymap.set("n", "<leader>sc", ":close<CR>") --close split window
--- keymap.set("n", "<leader>0", "<C-w>l") --  >> move to right 
+-- keymap.set("n", "<leader>0", "<C-w>l") --  >> move to right
 -- keymap.set("n", "<leader>9", "<C-w>h") --  >> move to left window
 -- keymap.set("n", "<leader>j", "<C-w>j") --  >> move down a window
 -- keymap.set("n", "<leader>k", "<C-w>k") --  >> move up a window
 -- keymap.set('n', '<C-Left>', '<Cmd>vertical resize -2<CR>')
 -- keymap.set('n', '<C-Right>', '<Cmd>vertical resize +2<CR>')
 
-
 -- first part is un-highlighting search results
 -- second part is moves cursor to next window (if multiple open windows)
-keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-W>w", {desc = "..."})
+keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-W>w", { desc = "..." })
 
 -- ADD LINE / INSERT LINE WITHOUT GOING INTO INSERT MODE
 keymap.set("n", "<leader>o", "o<Esc>0")
 
 -- Save in insert mode (Ctrl + w)
-keymap.set('i', '<C-s>', '<Esc>:w<CR>a')
-
-
+keymap.set("i", "<C-s>", "<Esc>:w<CR>a")
 
 -- NODE execute in neovim
-keymap.set('n', '<leader>n', '<Cmd>w<CR><Cmd>!node %<CR>')
-
-
+keymap.set("n", "<leader>n", "<Cmd>w<CR><Cmd>!node %<CR>")
 
 --JUMP TO END OF LINE IN INSERT MODE and add ; SAVE and new line
 --USED FOR JAVASCRIPT and CSS
 keymap.set("i", "9<leader>", "<Esc>A;<Esc>:w<CR>")
 keymap.set("n", "9<leader>", "<Esc>A;<Esc>:w<CR>")
 
-
 --GO TO END OF LINE in INSERT MODE
-keymap.set('i', 'jj', '<Esc><S-a><Cmd>w<CR>')
+keymap.set("i", "jj", "<Esc><S-a><Cmd>w<CR>")
 -- quick save :w WRITE FILE
-keymap.set('n', '<C-s>', '<Esc>:w<CR>')
+keymap.set("n", "<C-s>", "<Esc>:w<CR>")
 
 -- skip forward one or two lines in insert mode
 -- i.e. jump cursor out of [] when stuck inside
-keymap.set('i', 'z<leader>', '<right>')
-
+keymap.set("i", "z<leader>", "<right>")
 
 --Indent>
 -- Indent in Visual Mode
@@ -315,24 +298,22 @@ keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
 --move selected lines up or down with alt key
-keymap.set('n', '<A-k>', ':m .-2<cr>==')
-keymap.set('n', '<A-j>', ':m .+1<cr>==')
-
+keymap.set("n", "<A-k>", ":m .-2<cr>==")
+keymap.set("n", "<A-j>", ":m .+1<cr>==")
 
 --Open lazy plugin manager
 --think 1 looks like L or first thing that comes
-keymap.set('n', '<leader>1', ':Lazy<CR>')
+keymap.set("n", "<leader>1", ":Lazy<CR>")
 
-keymap.set('n', '<leader>t', ':InspectTree<CR>')
+keymap.set("n", "<leader>t", ":InspectTree<CR>")
 -- opens a syntax tree for the current file
---can see all the nodes in the document 
+--can see all the nodes in the document
 --type :InspectTree
 
 -- EXIT NEOVIM SHIFT ZZ SHORTCUT!
--- if no buffers are changed then exits neovim 
+-- if no buffers are changed then exits neovim
 -- if buffer configured prompts if user wants save
 keymap.set("n", "<leader>q", ":confirm qall<CR>")
-
 
 -- BLOCK MOVE LINES UP OR DOWN (visual mode)
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -344,16 +325,14 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- UPDATE:  conform.nvim in plugin folder:: use <leader>f to use prettier to format!
 keymap.set("n", "<leader>g", "maggVG=`a")
 
-
--- BUFFERS 
+-- BUFFERS
 -- remap PgUp and PgDn keys (Popos system)
 -- run nvim * to open up all files in folder
-keymap.set('n', '<PageUp>', '<Cmd>bprevious<CR>')
-keymap.set('n', '<PageDown>', '<Cmd>bnext<CR>')
+keymap.set("n", "<PageUp>", "<Cmd>bprevious<CR>")
+keymap.set("n", "<PageDown>", "<Cmd>bnext<CR>")
 
 -- Stop and Restart Live Server with Delay in between
-keymap.set('n', '<leader>h', [[<Cmd>LiveServerStop<CR>:sleep 500m<CR>:LiveServerStart<CR>]], {desc = "Live Webpage"})
-
+keymap.set("n", "<leader>h", [[<Cmd>LiveServerStop<CR>:sleep 500m<CR>:LiveServerStart<CR>]], { desc = "Live Webpage" })
 
 -- PREVIOUS shortcut configuration (try above first for a while before deleting)
 -- LIVE SERVER START
@@ -362,24 +341,40 @@ keymap.set('n', '<leader>h', [[<Cmd>LiveServerStop<CR>:sleep 500m<CR>:LiveServer
 -- keymap.set('n', '<leader>s', '<Cmd>LiveServerStop<CR>')
 
 -- check if LSP enabled
-keymap.set('n', '<leader>l', '<Cmd>LspInfo<CR>')
+keymap.set("n", "<leader>l", "<Cmd>LspInfo<CR>")
 
 -- basic layout of combining a keymap to a function
 -- vim.keymap.set("<mode>", '<key>',
 -- function()
-    -- do something
-    -- end)
+-- do something
+-- end)
 
-    -- remove annoying asterisks generated in .css and .js files
-    vim.api.nvim_create_autocmd("FileType", {
-        pattern = "*",
-        command = "setlocal formatoptions-=ro"
-    })
+-- remove annoying asterisks generated in .css and .js files
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*",
+	command = "setlocal formatoptions-=ro",
+})
 
-    -- Highlight yanked text for 150ms
-    vim.api.nvim_create_autocmd('TextYankPost', {
-        callback = function()
-            vim.highlight.on_yank()
-        end
-    })
+-- Highlight yanked text for 150ms
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
 
+-- 10J or 10K now count as "jumps" (see VIM JUMP LIST)
+local function jump_if_counted(direction)
+	local count = vim.v.count1 -- gets the count (defaults to 1 if none)
+	if count > 1 then
+		vim.cmd("normal! m`") -- set a temporary mark at current position
+	end
+	vim.cmd("normal!" .. count .. direction) -- execute the movement
+end
+
+-- Map keys in normal mode
+vim.keymap.set("n", "j", function()
+	jump_if_counted("j")
+end, { noremap = true, expr = false })
+vim.keymap.set("n", "k", function()
+	jump_if_counted("k")
+end, { noremap = true, expr = false })

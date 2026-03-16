@@ -215,7 +215,7 @@ vim.o.splitbelow = true
 keymap.set("n", "x", '"_x')
 
 -- when you delete or change a word it will include the -
-opt.iskeyword:append("-")
+opt.iskeyword:append({"-","#","$","@"})
 
 -- DIAGNOSTICS
 vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next(); vim.diagnostic.open_float() end, { desc = "Next Diagnostic + Float" })

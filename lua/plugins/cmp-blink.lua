@@ -3,6 +3,7 @@ return {
 	dependencies = { "rafamadriz/friendly-snippets" },
 
 	version = "1.*",
+  -- change color when using signature hep
 	init = function()
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			callback = function()
@@ -41,6 +42,11 @@ return {
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
 			providers = {
+        path = {
+          -- hidden files show up in auto completion
+          module = "blink.cmp.sources.path",
+          opts = { show_hidden_files_by_default = true},
+        },
 				lsp = {
 					-- Do not pop up auto complete for single digits
 					-- like typing [1,2,3] won't pop up weird completions

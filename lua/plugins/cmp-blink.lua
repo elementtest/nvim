@@ -44,7 +44,6 @@ return {
 			providers = {
         path = {
           -- hidden files show up in auto completion
-          module = "blink.cmp.sources.path",
           opts = { show_hidden_files_by_default = true},
         },
 				lsp = {

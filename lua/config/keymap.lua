@@ -370,7 +370,6 @@ local function jump_if_counted(direction)
 	end
 	vim.cmd("normal!" .. count .. direction) -- execute the movement
 end
-
 -- Map keys in normal mode
 vim.keymap.set("n", "j", function()
 	jump_if_counted("j")

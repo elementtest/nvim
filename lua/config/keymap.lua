@@ -77,6 +77,10 @@ local opt = vim.opt
 -- can also Delet Surround i.e. ds( ds" etc
 -- :h nvim-surround.usage for help
 
+-- EMMET
+-- keymap: <leader>we ::: will put you in abbreviation mode
+-- abbreviation mode : more complex emmet i.e. nesting etc
+
 -- FORMAT (using prettier)
 -- <leader> f will format the entire document
 -- see conform-prettier.lua plugin

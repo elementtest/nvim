@@ -80,7 +80,7 @@ local opt = vim.opt
 -- EMMET
 -- keymap: <leader>we ::: will put you in abbreviation mode
 -- abbreviation mode : more complex emmet i.e. nesting etc
--- hit control y then n to go to hrefs (can do other actions)
+-- hit control + y and wait to popup the emmet menu (via whichkey plugin)
 
 -- FORMAT (using prettier)
 -- <leader> f will format the entire document

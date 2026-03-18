@@ -80,7 +80,8 @@ local opt = vim.opt
 -- EMMET
 -- keymap: <leader>we ::: will put you in abbreviation mode
 -- abbreviation mode : more complex emmet i.e. nesting etc
--- hit control + y and wait to popup the emmet menu (via whichkey plugin)
+-- leader key set as COMMA
+-- pressing ,, on any emmet text i.e. p>h1>div then ,, will immmediately expand it
 -- $# acts as a placeholder for indivual items selected visually
 
 -- FORMAT (using prettier)

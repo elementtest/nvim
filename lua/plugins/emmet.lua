@@ -1,5 +1,6 @@
 return {
 	"mattn/emmet-vim",
+  ft = { "html" },
   init = function()
     vim.g.user_emmet_leader_key = ','
     -- vim.g.user_emmet_mode = 'nv'
@@ -8,7 +9,7 @@ return {
 		{
 			"<leader>we",
 			"<plug>(emmet-expand-abbr)",
-			mode = { "n", "v" },
+			mode = { "v" },
 			desc = "Emmet Wrap",
 		},
 	},

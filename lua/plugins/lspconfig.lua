@@ -63,12 +63,13 @@ return {
 		vim.lsp.enable("ts_ls")
 
     -- EMMET LSP --
-		vim.lsp.config("emmet_language_server", {
-			filetypes = { "css", "html" },
-			on_attach = custom_attach,
-			capabilities = capabilities,
-		})
-		vim.lsp.enable("emmet_language_server")
+    -- DISABLING EMMET (use mattn emmet emmet-vim plugin)
+		-- vim.lsp.config("emmet_language_server", {
+		-- 	filetypes = { "css", "html" },
+		-- 	on_attach = custom_attach,
+		-- 	capabilities = capabilities,
+		-- })
+		-- vim.lsp.enable("emmet_language_server")
 
     -- CSS LSP --
 		vim.lsp.config("cssls", {

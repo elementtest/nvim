@@ -299,6 +299,8 @@ keymap.set("n", "<C-s>", "<Esc>:w<CR>")
 -- i.e. jump cursor out of [] when stuck inside
 keymap.set("i", "z<leader>", "<right>")
 
+keymap.set("v", "p", '"_dP')
+
 --Indent>
 -- Indent in Visual Mode
 keymap.set("v", "<", "<gv")

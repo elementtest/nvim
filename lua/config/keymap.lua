@@ -310,6 +310,9 @@ keymap.set("v", ">", ">gv")
 keymap.set("n", "<A-k>", ":m .-2<cr>==")
 keymap.set("n", "<A-j>", ":m .+1<cr>==")
 
+-- PASTE 
+vim.keymap.set("n", "<leader>p", "]p")
+
 --Open lazy plugin manager
 --think 1 looks like L or first thing that comes
 keymap.set("n", "<leader>1", ":Lazy<CR>")

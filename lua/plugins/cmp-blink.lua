@@ -3,13 +3,15 @@ return {
 	dependencies = { "rafamadriz/friendly-snippets", { "L3MON4D3/LuaSnip", version = "v2.*" } },
 
 	version = "1.*",
-	-- change color when using signature hep
 	init = function()
+    -- lua works
     require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/snippets" })
+    -- vs code style works
     require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 
 
 
+    -- change color when using signature hep
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			callback = function()
 				vim.api.nvim_set_hl(

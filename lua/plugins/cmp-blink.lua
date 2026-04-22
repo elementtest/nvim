@@ -1,6 +1,6 @@
 return {
 	"saghen/blink.cmp",
-	dependencies = { "rafamadriz/friendly-snippets" },
+	dependencies = { "rafamadriz/friendly-snippets", 'L3MON4D3/LuaSnip', version = 'v2.*' },
 
 	version = "1.*",
 	-- change color when using signature hep

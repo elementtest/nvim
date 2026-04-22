@@ -3,13 +3,15 @@ return {
 	dependencies = { "rafamadriz/friendly-snippets" },
 
 	version = "1.*",
-  -- change color when using signature hep
+	-- change color when using signature hep
 	init = function()
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			callback = function()
-        vim.api.nvim_set_hl(0, "BlinkCmpSignatureHelpActiveParameter", { bg = "#011627", fg = "#00d7af", bold = true })
-
-
+				vim.api.nvim_set_hl(
+					0,
+					"BlinkCmpSignatureHelpActiveParameter",
+					{ bg = "#011627", fg = "#00d7af", bold = true }
+				)
 			end,
 		})
 		-- Apply it immediately for the current session
@@ -41,15 +43,19 @@ return {
 
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
+      -- when i am in this kind of file, use these sources instead
+			per_filetype = {
+				css = { "lsp" },
+			},
 			providers = {
-        path = {
-          -- hidden files show up in auto completion
-          opts = { show_hidden_files_by_default = true},
-        },
+				path = {
+					-- hidden files show up in auto completion
+					opts = { show_hidden_files_by_default = true },
+				},
 				lsp = {
 					-- Do not pop up auto complete for single digits
 					-- like typing [1,2,3] won't pop up weird completions
-					min_keyword_length = 2,
+					-- min_keyword_length = 2,
 				},
 			},
 		},

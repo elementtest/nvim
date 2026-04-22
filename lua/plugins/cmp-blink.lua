@@ -43,7 +43,7 @@ return {
 
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
-      -- when i am in this kind of file, use these sources instead
+      -- when i am in this kind of file, use these  instead
 			per_filetype = {
 				css = { "lsp" },
 			},

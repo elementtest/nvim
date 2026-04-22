@@ -23,6 +23,11 @@
       "$0"
     ],
     "description": "Basic CSS setup with Google Fonts and base styles"
+  },
+    "Red Border": {
+    "prefix": "brd",
+    "body": ["border: 3px solid red;"],
+    "description": "Quick red border for debugging"
   }
 }
 

@@ -1,17 +1,47 @@
 return {
 	"saghen/blink.cmp",
-	dependencies = { "rafamadriz/friendly-snippets", { "L3MON4D3/LuaSnip", version = "v2.*" } },
+	dependencies = {
+		{
+			"L3MON4D3/LuaSnip",
+			version = "v2.*",
+			dependencies = { "rafamadriz/friendly-snippets" }, -- ← move it here
+		},
+	},
 
 	version = "1.*",
 	init = function()
-    -- lua works
-    require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/snippets" })
-    -- vs code style works
-    require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
+		-- lua works
+    require("luasnip.loaders.from_vscode").lazy_load() -- ← add this (friendly-snippets)
+		require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/snippets" })
+		-- vs code style works
+		require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 
+		-- LUASNIP keybindings
+    -- Tab to jump through fields (i.e. a function)
+		vim.keymap.set({ "i", "s" }, "<Tab>", function()
+			if require("luasnip").jumpable(1) then
+				require("luasnip").jump(1)
+			else
+				return "<Tab>"
+			end
+		end, { expr = true, silent = true })
 
+    -- Shift + tab to go back through fields
+		vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
+			if require("luasnip").jumpable(-1) then
+				require("luasnip").jump(-1)
+			end
+		end, { silent = true })
 
-    -- change color when using signature hep
+    -- choice node selection i.e. in css control + l will go through the choices
+		vim.keymap.set({ "i", "s" }, "<C-l>", function()
+			if require("luasnip").choice_active() then
+				require("luasnip").change_choice(1)
+			end
+		end)
+		-- TEST
+
+		-- change color when using signature hep
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			callback = function()
 				vim.api.nvim_set_hl(
@@ -48,7 +78,15 @@ return {
 			documentation = { auto_show = true },
 		},
 
-		snippets = { preset = "luasnip" },
+		-- snippets = { preset = "luasnip" },
+
+		-- Enable LuaSnip
+		snippets = {
+			preset = "luasnip",
+			expand = function(snippet)
+				require("luasnip").lsp_expand(snippet)
+			end,
+		},
 
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },

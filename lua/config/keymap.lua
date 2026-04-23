@@ -52,11 +52,12 @@ local opt = vim.opt
 --see ~/.config/nvim/lua/plugins/treesitter.lua
 --press <C-x> control x
 
--- LSP (Language Server Protocol)
--- (popup code suggestion) (configured in blink-cmp.lua file)
+-- BLINK (Completion aka popup box)
 -- C-n go to next suggestion :: C-p previous :: C-y choose suggestion ::C-Space open menu or docs
 -- C-k Toggle signature help :: C-e hide menu
 -- K open documentation (i.e. press on addeventlistener)
+
+-- LSP (Language Server Protocol)
 -- Can use MASON or NPM to install language servers!
 -- HELP COMMAND :help lspconfig-all
 -- search for the language server in the list (n to go to next match)
@@ -65,6 +66,15 @@ local opt = vim.opt
 -- if neovim cant find it then it cant run it
 -- display all NPM packages installed
 -- npm list -g --depth=0
+
+-- LUASNIP
+-- in blink luasnip has a friendly snippets dependency
+-- once you expand a snippet with blink, use (control l) to go through menu choices i.e. css property
+-- functions like javascript can use tab and shift + tab to go through each part of the function
+-- this functionality all provided by luasnip (configured in blink plugin file)
+-- :lua vim.fn.setreg('+',vim.inspect(require("luasnip").available()["javascript"]))
+-- this will copy all the javascript snippets available to the clipboard
+-- you can replace javascript with html or css in the command above ^^ to find all snippets available
 
 -- LIVE SERVER
 -- open up folder with vim .

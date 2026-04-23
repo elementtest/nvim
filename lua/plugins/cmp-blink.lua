@@ -7,17 +7,18 @@ return {
 			dependencies = { "rafamadriz/friendly-snippets" }, -- ← move it here
 		},
 	},
-
 	version = "1.*",
+
 	init = function()
-		-- lua works
-    require("luasnip.loaders.from_vscode").lazy_load() -- ← add this (friendly-snippets)
+		-- friendly snippets load
+		require("luasnip.loaders.from_vscode").lazy_load()
+		-- load vscode style snps in folder
 		require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/snippets" })
-		-- vs code style works
+		-- load lua style snps in folder
 		require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 
 		-- LUASNIP keybindings
-    -- Tab to jump through fields (i.e. a function)
+		-- Tab to jump through fields (i.e. a function)
 		vim.keymap.set({ "i", "s" }, "<Tab>", function()
 			if require("luasnip").jumpable(1) then
 				require("luasnip").jump(1)
@@ -26,43 +27,29 @@ return {
 			end
 		end, { expr = true, silent = true })
 
-    -- Shift + tab to go back through fields
+		-- Shift + tab to go back through fields
 		vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
 			if require("luasnip").jumpable(-1) then
 				require("luasnip").jump(-1)
 			end
 		end, { silent = true })
 
-    -- choice node selection i.e. in css control + l will go through the choices
+		-- choice node selection i.e. in css control + l will go through the choices
 		vim.keymap.set({ "i", "s" }, "<C-l>", function()
 			if require("luasnip").choice_active() then
 				require("luasnip").change_choice(1)
 			end
 		end)
-		-- TEST
-
-		-- change color when using signature hep
-		vim.api.nvim_create_autocmd("ColorScheme", {
-			callback = function()
-				vim.api.nvim_set_hl(
-					0,
-					"BlinkCmpSignatureHelpActiveParameter",
-					{ bg = "#011627", fg = "#00d7af", bold = true }
-				)
-			end,
-		})
-		-- Apply it immediately for the current session
-		vim.api.nvim_exec_autocmds("ColorScheme", {})
 	end,
 
 	opts = {
+
 		-- type ( to trigger to be a cheat sheet for anything that requires arguments i.e. functions
 		-- typing ) will close it
 		signature = {
 			enabled = true,
 		},
 		keymap = { preset = "default" },
-
 		appearance = {
 			nerd_font_variant = "mono",
 			use_nvim_cmp_as_default = false,
@@ -78,7 +65,6 @@ return {
 			documentation = { auto_show = true },
 		},
 
-		-- snippets = { preset = "luasnip" },
 
 		-- Enable LuaSnip
 		snippets = {

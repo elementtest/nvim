@@ -46,12 +46,6 @@ local opt = vim.opt
 --right now commenting out.  yy works fine for this purpose
 --!USE BIG Y TO NOT HAVE A TRAILING SPACE COPIED
 
--- TREESITTER  SHORTCUT
--- (called incremental selection)
--- can be used for other keyboard shortcuts (selecting code sections)
---see ~/.config/nvim/lua/plugins/treesitter.lua
---press <C-x> control x
-
 -- BLINK (Completion aka popup box)
 -- C-n go to next suggestion :: C-p previous :: C-y choose suggestion ::C-Space open menu or docs
 -- C-k Toggle signature help :: C-e hide menu

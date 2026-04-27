@@ -65,7 +65,6 @@ return {
 			documentation = { auto_show = true },
 		},
 
-
 		-- Enable LuaSnip
 		snippets = {
 			preset = "luasnip",
@@ -79,8 +78,15 @@ return {
 			-- when i am in this kind of file, use these  instead
 			per_filetype = {
 				css = { "lsp", "snippets" },
+				html = { "lsp", "snippets", "buffer" },
 			},
 			providers = {
+				buffer = {
+					score_offset = -100,
+				},
+        snippets = {
+          score_offset = 100, 
+        },
 				path = {
 					-- hidden files show up in auto completion
 					opts = { show_hidden_files_by_default = true },

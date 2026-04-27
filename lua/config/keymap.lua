@@ -97,6 +97,11 @@ local opt = vim.opt
 -- WHILE INSIDE press gc to set a new CWD location in the file tree!
 -- if you hit <leader>fm you will now go to that location!
 
+-- TEXT OBJECTS (use mini.ai (stands for around/ai))
+-- redefine keymaps i.e. ci{ change in parens or around da[ delete around brackets
+-- new folder in nvim/queries to define how text objects are defined
+
+
 --<<<<KEYMAPS>>>>--
 
 -- Behaviour
@@ -253,6 +258,8 @@ keymap.set("n", "<C-r>", "<C-r>:w<CR>")
 keymap.set("n", "H", "^", { desc = "Go to First Char" })
 keymap.set("n", "L", "$", { desc = "Go to Last Char" })
 
+
+
 -- REMAP arrow keys to scrolling keys
 -- left and right are big scrolls
 -- up and down are small scrolls
@@ -393,3 +400,4 @@ end, { noremap = true, expr = false })
 vim.keymap.set("n", "k", function()
 	jump_if_counted("k")
 end, { noremap = true, expr = false })
+

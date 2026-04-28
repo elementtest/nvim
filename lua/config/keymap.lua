@@ -354,6 +354,10 @@ keymap.set("n", "<leader>g", "maggVG=`a")
 keymap.set("n", "<PageUp>", "<Cmd>bprevious<CR>")
 keymap.set("n", "<PageDown>", "<Cmd>bnext<CR>")
 
+-- make it easier to switch between buffers
+keymap.set("i", "<PageUp>", "<Esc>")
+keymap.set("i", "<PageDown>", "<Esc>")
+
 -- Stop and Restart Live Server with Delay in between
 keymap.set("n", "<leader>h", [[<Cmd>LiveServerStop<CR>:sleep 500m<CR>:LiveServerStart<CR>]], { desc = "Live Webpage" })
 

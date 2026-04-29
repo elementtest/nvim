@@ -310,7 +310,6 @@ keymap.set("n", "<C-s>", "<Esc>:w<CR>")
 -- i.e. jump cursor out of [] when stuck inside
 keymap.set("i", "z<leader>", "<right>")
 
-keymap.set("v", "p", '"_dP')
 
 --Indent>
 -- Indent in Visual Mode
@@ -323,6 +322,9 @@ keymap.set("n", "<A-j>", ":m .+1<cr>==")
 
 -- PASTE 
 vim.keymap.set("n", "<leader>p", "]p")
+-- visual select and paste something to replace it
+keymap.set("v", "p", '"_dP')
+
 
 --Open lazy plugin manager
 --think 1 looks like L or first thing that comes

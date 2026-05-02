@@ -233,6 +233,9 @@ end, { desc = "Next Diagnostic + Float" })
 -- YANK / COPY ENTIRE FILE
 vim.keymap.set("n", "<leader>Y", ":%y+<CR>", { desc = "Yank entire buffer to clipboard" })
 
+-- SELECT ENTIRE FILE
+vim.keymap.set("n", "<leader>G", "ggVG", { desc = "Copy entire file"} )
+
 -- DELETE AND UNDO SAVE OPTIONS
 
 -- delete in visual mode saves file

@@ -31,7 +31,7 @@ return {
 					a = "@value.outer",
 					i = "@value.inner",
 				}),
-				["p"] = ai.gen_spec.treesitter({
+				["r"] = ai.gen_spec.treesitter({
 					a = "@property.outer",
 					i = "@property.inner",
 				}),

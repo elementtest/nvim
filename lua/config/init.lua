@@ -40,10 +40,11 @@ local opts = {
 			"zipPlugin",
 		},
 	},
--- DO NOT NOTIFY ME WHEN I AM WRITING A PLUGIN.LUA file
+-- false means will change plugin / config and will not auto update (i.e. in another js file)
+-- true means will update live in real time (i.e. to not have to exit / restart neovim 10 times)
 	change_detection = {
-    enabled = false,
-		notify = false,
+    enabled = true,
+		notify = true,
 	},
 }
 require("lazy").setup(plugins, opts)

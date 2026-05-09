@@ -55,5 +55,12 @@ return {
                 mode = 'i',
             },
         },
-    },
+    opts = function()
+    return {
+        oldfiles = {
+            include_current_session = true,
+        }
+    }
+end,
+  },
 }

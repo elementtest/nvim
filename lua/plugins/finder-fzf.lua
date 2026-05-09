@@ -47,7 +47,8 @@ return {
             -- search every file you've opened (useful)
             { '<leader>fr', '<cmd>FzfLua oldfiles<cr>', desc = 'Recently opened files' },
             -- { '<leader>f<', '<cmd>FzfLua resume<cr>', desc = 'Resume last fzf command' },
-            { 'z=', '<cmd>FzfLua spell_suggest<cr>', desc = 'Spelling suggestions' },
+            -- Spell check (i.e. put on word and hit z=) better ui with fzf
+            -- { 'z=', '<cmd>FzfLua spell_suggest<cr>', desc = 'Spelling suggestions' },
             {
                 '<C-x><C-f>',
                 function()

@@ -30,13 +30,21 @@ return {
                 desc = 'Search current buffer',
                 mode = { 'n', 'x' },
             },
+            -- search across current buffers
             { '<leader>fB', '<cmd>FzfLua buffers<cr>', desc = 'Buffers' },
-            { '<leader>fc', '<cmd>FzfLua highlights<cr>', desc = 'Highlights' },
+            -- colorscheme customization
+            -- { '<leader>fc', '<cmd>FzfLua highlights<cr>', desc = 'Highlights' },
+            --show list of ALL diagnostics
             { '<leader>fd', '<cmd>FzfLua lsp_document_diagnostics<cr>', desc = 'Document diagnostics' },
+            -- search for a book title in library
             { '<leader>ff', '<cmd>FzfLua files<cr>', desc = 'Find files' },
+            -- live grep search for sentence in all books in the library
             { '<leader>fg', '<cmd>FzfLua live_grep<cr>', desc = 'Grep' },
+            -- live grep (visual mode) will auto paste into search box
             { '<leader>fg', '<cmd>FzfLua grep_visual<cr>', desc = 'Grep', mode = 'x' },
+            -- neovim help docs (easier)
             { '<leader>fh', '<cmd>FzfLua help_tags<cr>', desc = 'Help' },
+            -- search every file you've opened (useful)
             { '<leader>fr', '<cmd>FzfLua oldfiles<cr>', desc = 'Recently opened files' },
             -- { '<leader>f<', '<cmd>FzfLua resume<cr>', desc = 'Resume last fzf command' },
             { 'z=', '<cmd>FzfLua spell_suggest<cr>', desc = 'Spelling suggestions' },

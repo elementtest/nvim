@@ -87,6 +87,7 @@ local opt = vim.opt
 -- leader key set as COMMA
 -- pressing ,, on any emmet text i.e. p>h1>div then ,, will immmediately expand it
 -- $# acts as a placeholder for indivual items selected visually
+-- use CONTROL + j to jump to next item after expanded (i.e. nav>ul>li*9)
 
 -- FORMAT (using prettier)
 -- <leader> f will format the entire document

@@ -102,7 +102,6 @@ local opt = vim.opt
 -- redefine keymaps i.e. ci{ change in parens or around da[ delete around brackets
 -- new folder in nvim/queries to define how text objects are defined
 
-
 --<<<<KEYMAPS>>>>--
 
 -- Behaviour
@@ -227,15 +226,24 @@ opt.iskeyword:append({ "-", "#", "$", "@" })
 
 -- DIAGNOSTICS
 vim.keymap.set("n", "]d", function()
-	vim.diagnostic.goto_next()
+    vim.diagnostic.goto_next()
 	vim.diagnostic.open_float()
 end, { desc = "Next Diagnostic + Float" })
+
+vim.keymap.set("n", "[d", function()
+    vim.diagnostic.goto_prev()
+	vim.diagnostic.open_float()
+end, { desc = "Prev Diagnostic + Float" })
+
+vim.keymap.set("n", "<leader>[", function()
+    vim.diagnostic.setqflist()
+end, { desc = "Diagnostics Quickfix List" })
 
 -- YANK / COPY ENTIRE FILE
 vim.keymap.set("n", "<leader>Y", ":%y+<CR>", { desc = "Yank entire buffer to clipboard" })
 
 -- SELECT ENTIRE FILE
-vim.keymap.set("n", "<leader>G", "ggVG", { desc = "Copy entire file"} )
+vim.keymap.set("n", "<leader>G", "ggVG", { desc = "Copy entire file" })
 
 -- DELETE AND UNDO SAVE OPTIONS
 
@@ -261,8 +269,6 @@ keymap.set("n", "<C-r>", "<C-r>:w<CR>")
 -- GO TO ZEEEE FIRST NON WHITE SPACE CHARACTER
 keymap.set("n", "H", "^", { desc = "Go to First Char" })
 keymap.set("n", "L", "$", { desc = "Go to Last Char" })
-
-
 
 -- REMAP arrow keys to scrolling keys
 -- left and right are big scrolls
@@ -314,7 +320,6 @@ keymap.set("n", "<C-s>", "<Esc>:w<CR>")
 -- i.e. jump cursor out of [] when stuck inside
 keymap.set("i", "z<leader>", "<right>")
 
-
 --Indent>
 -- Indent in Visual Mode
 keymap.set("v", "<", "<gv")
@@ -324,11 +329,10 @@ keymap.set("v", ">", ">gv")
 keymap.set("n", "<A-k>", ":m .-2<cr>==")
 keymap.set("n", "<A-j>", ":m .+1<cr>==")
 
--- PASTE 
+-- PASTE
 vim.keymap.set("n", "<leader>p", "]p")
 -- visual select and paste something to replace it
 keymap.set("v", "p", '"_dP')
-
 
 --Open lazy plugin manager
 --think 1 looks like L or first thing that comes
@@ -410,4 +414,3 @@ end, { noremap = true, expr = false })
 vim.keymap.set("n", "k", function()
 	jump_if_counted("k")
 end, { noremap = true, expr = false })
-

@@ -46,8 +46,9 @@ return {
 
 		-- type ( to trigger to be a cheat sheet for anything that requires arguments i.e. functions
 		-- typing ) will close it
+    -- UPDATE : disable signature for now to enable set enabled = true
 		signature = {
-			enabled = true,
+			enabled = false,
 		},
 		keymap = { preset = "default" },
 		appearance = {
